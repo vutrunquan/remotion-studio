@@ -1,0 +1,3322 @@
+{
+ "meta": {
+  "channel": "CHANNEL",
+  "fileNo": 307,
+  "fps": 30,
+  "aspect": "16:9",
+  "res": 1080,
+  "accent": "#e51939",
+  "autoGlitch": true,
+  "glitchEvery": 10,
+  "outroHold": 1.5,
+  "ruleTotal": 7,
+  "title": "THE 3:07 CALL"
+ },
+ "scenes": [
+  {
+   "id": "s01",
+   "text": "IF YOUR PHONE EVER RINGS AT 3:07 AM...",
+   "visual": {
+    "tpl": "stage",
+    "set": "bedroom",
+    "setArgs": {
+     "time": "3:07",
+     "wake": 0
+    },
+    "zoom": 1.3,
+    "focus": [
+     650,
+     300
+    ],
+    "items": [
+     {
+      "id": "ns",
+      "kind": "nightstand",
+      "x": 500,
+      "y": 435,
+      "scale": 1
+     },
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 500,
+      "y": 302,
+      "scale": 0.5,
+      "lit": true,
+      "ring": [
+       0.6,
+       30
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "s02",
+   "text": "AND THE SCREEN SHOWS YOUR OWN NUMBER...",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 609,
+      "y": 250,
+      "scale": 1.7,
+      "lit": true,
+      "label": "YOU",
+      "sub": "INCOMING CALL",
+      "labelSize": 17,
+      "ring": true
+     }
+    ]
+   }
+  },
+  {
+   "id": "s03",
+   "text": "DO NOT SCREAM.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "kind": "person",
+      "pose": "scream",
+      "x": 609,
+      "y": 440,
+      "scale": 1.62
+     },
+     {
+      "kind": "cross",
+      "x": 609,
+      "y": 296,
+      "w": 290,
+      "h": 300,
+      "stroke": 14,
+      "t0": 0.25
+     }
+    ]
+   }
+  },
+  {
+   "id": "s04",
+   "text": "DO NOT THROW IT ACROSS THE ROOM.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "kind": "person",
+      "pose": "stand",
+      "x": 420,
+      "y": 440,
+      "scale": 1.5
+     },
+     {
+      "kind": "phone",
+      "x": [
+       [
+        0,
+        470
+       ],
+       [
+        0.9,
+        980
+       ]
+      ],
+      "y": [
+       [
+        0,
+        300
+       ],
+       [
+        0.4,
+        170
+       ],
+       [
+        0.9,
+        400
+       ]
+      ],
+      "rot": [
+       [
+        0,
+        0
+       ],
+       [
+        0.9,
+        520
+       ]
+      ],
+      "scale": 0.7,
+      "ring": true
+     },
+     {
+      "kind": "cross",
+      "x": 730,
+      "y": 270,
+      "w": 230,
+      "h": 230,
+      "stroke": 14,
+      "t0": 0.7
+     }
+    ]
+   }
+  },
+  {
+   "id": "s05",
+   "text": "DO NOT RUN.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "kind": "door",
+      "x": 800,
+      "y": 440,
+      "scale": 1.3
+     },
+     {
+      "kind": "person",
+      "pose": "run",
+      "x": 520,
+      "y": 440,
+      "scale": 1.5
+     },
+     {
+      "kind": "speed",
+      "x": 400,
+      "y": 330,
+      "scale": 1.2
+     }
+    ]
+   }
+  },
+  {
+   "id": "s06",
+   "text": "AND DO NOT LET IT HEAR YOU BREATHING.",
+   "visual": {
+    "tpl": "stage",
+    "set": "bedroom",
+    "setArgs": {
+     "time": "3:07",
+     "wake": 0
+    },
+    "zoom": 1.3,
+    "focus": [
+     650,
+     300
+    ],
+    "items": [
+     {
+      "id": "ns",
+      "kind": "nightstand",
+      "x": 500,
+      "y": 435,
+      "scale": 1
+     },
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 500,
+      "y": 302,
+      "scale": 0.5,
+      "lit": true,
+      "ring": true
+     }
+    ],
+    "links": [
+     {
+      "style": "gaze",
+      "from": "ph",
+      "to": "bed@head",
+      "start": 0.9,
+      "dur": 0.6
+     }
+    ]
+   },
+   "transition": "glitch",
+   "fx": [
+    {
+     "t": 0.05,
+     "type": "glitch",
+     "d": 0.5,
+     "s": 1.0
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0,
+     "name": "heartbeat",
+     "vol": 0.6
+    }
+   ]
+  },
+  {
+   "id": "s07",
+   "text": "THERE ARE SEVEN RULES.",
+   "visual": {
+    "tpl": "counter",
+    "n": 7
+   }
+  },
+  {
+   "id": "s08",
+   "text": "MOST PEOPLE BREAK THE FOURTH.",
+   "visual": {
+    "tpl": "counter",
+    "n": 7,
+    "static": true,
+    "crossed": [
+     4
+    ],
+    "crossAt": 0.45
+   }
+  },
+  {
+   "id": "s09",
+   "text": "NOBODY WAS EVER SUPPOSED TO NEED THE SEVENTH.",
+   "visual": {
+    "tpl": "counter",
+    "n": 7,
+    "static": true,
+    "crossed": [
+     4
+    ],
+    "crossAt": 0,
+    "classified": [
+     7
+    ],
+    "classifiedAt": 0.9
+   },
+   "fx": [
+    {
+     "t": 0.8,
+     "type": "glitch",
+     "d": 0.6,
+     "s": 0.9
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "text": "THE LINE HAS BEEN OPEN FOR A VERY LONG TIME.",
+   "visual": {
+    "tpl": "exhibit",
+    "label": "EXHIBIT A",
+    "meta": [
+     "YEAR: 1927",
+     "LINE: ALREADY OPEN"
+    ],
+    "layout": "portrait"
+   },
+   "fx": [
+    {
+     "t": 2.2,
+     "type": "glitch",
+     "d": 0.3,
+     "s": 0.7
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "text": "SOMEONE WAS ALREADY LISTENING.",
+   "visual": {
+    "tpl": "black"
+   },
+   "fx": [
+    {
+     "t": 0.2,
+     "type": "glitch",
+     "d": 0.5,
+     "s": 0.8
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "text": "THAT IS A LONG TIME TO HOLD A LINE.",
+   "visual": {
+    "tpl": "exhibit",
+    "label": "EXHIBIT B",
+    "meta": [
+     "YEAR: 1964",
+     "STATUS: LISTENING"
+    ],
+    "layout": "landscape"
+   }
+  },
+  {
+   "id": "s13",
+   "text": "YOUR PHONE KNOWS WHEN YOU FALL ASLEEP.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 300,
+      "y": 300,
+      "scale": 1.0,
+      "lit": true
+     },
+     {
+      "id": "bed",
+      "kind": "bed",
+      "x": 900,
+      "y": 435
+     },
+     {
+      "kind": "clock",
+      "x": 860,
+      "y": 120,
+      "time": "3:07"
+     }
+    ],
+    "links": [
+     {
+      "style": "dotted",
+      "from": [
+       345,
+       300
+      ],
+      "to": "bed@head",
+      "start": 0.3,
+      "dur": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "id": "s14",
+   "text": "IT KNOWS WHICH SIDE OF THE BED IS YOURS.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 300,
+      "y": 300,
+      "scale": 1.0,
+      "lit": true
+     },
+     {
+      "id": "bed",
+      "kind": "bed",
+      "x": 900,
+      "y": 435
+     },
+     {
+      "kind": "text",
+      "x": 805,
+      "y": 300,
+      "text": "YOU",
+      "size": 26,
+      "color": "accent",
+      "t0": 0.4
+     }
+    ],
+    "links": [
+     {
+      "style": "dotted",
+      "from": [
+       345,
+       300
+      ],
+      "to": "bed@head",
+      "start": 0.2,
+      "dur": 0.7
+     }
+    ]
+   }
+  },
+  {
+   "id": "s15",
+   "text": "IT KNOWS YOUR PASSCODE.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 300,
+      "y": 300,
+      "scale": 1.0,
+      "lit": true
+     },
+     {
+      "id": "pin",
+      "kind": "text",
+      "x": 900,
+      "y": 340,
+      "text": "• • • •",
+      "size": 96
+     }
+    ],
+    "links": [
+     {
+      "style": "dotted",
+      "from": [
+       345,
+       300
+      ],
+      "to": [
+       800,
+       325
+      ],
+      "start": 0.2,
+      "dur": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "id": "s16",
+   "text": "IT KNOWS THE SOUND OF YOUR VOICE.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 300,
+      "y": 300,
+      "scale": 1.0,
+      "lit": true
+     },
+     {
+      "id": "man",
+      "kind": "person",
+      "pose": "stand",
+      "x": 900,
+      "y": 440,
+      "scale": 1.3
+     },
+     {
+      "kind": "svg",
+      "x": 1010,
+      "y": 300,
+      "markup": "<g fill=\"#fff\"><rect x=\"-30\" y=\"-7.0\" width=\"6\" height=\"14\" rx=\"3\"/><rect x=\"-20\" y=\"-17.0\" width=\"6\" height=\"34\" rx=\"3\"/><rect x=\"-10\" y=\"-11.0\" width=\"6\" height=\"22\" rx=\"3\"/><rect x=\"0\" y=\"-26.0\" width=\"6\" height=\"52\" rx=\"3\"/><rect x=\"10\" y=\"-15.0\" width=\"6\" height=\"30\" rx=\"3\"/><rect x=\"20\" y=\"-30.0\" width=\"6\" height=\"60\" rx=\"3\"/><rect x=\"30\" y=\"-13.0\" width=\"6\" height=\"26\" rx=\"3\"/><rect x=\"40\" y=\"-22.0\" width=\"6\" height=\"44\" rx=\"3\"/><rect x=\"50\" y=\"-9.0\" width=\"6\" height=\"18\" rx=\"3\"/><rect x=\"60\" y=\"-18.0\" width=\"6\" height=\"36\" rx=\"3\"/><rect x=\"70\" y=\"-6.0\" width=\"6\" height=\"12\" rx=\"3\"/></g>"
+     }
+    ],
+    "links": [
+     {
+      "style": "dotted",
+      "from": [
+       345,
+       300
+      ],
+      "to": "man@head",
+      "start": 0.2,
+      "dur": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "id": "s17",
+   "text": "MOST PHONES DO NOTHING WITH THIS INFORMATION.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "p0",
+      "kind": "phone",
+      "x": 150,
+      "y": 330,
+      "scale": 0.75,
+      "lit": false
+     },
+     {
+      "id": "p1",
+      "kind": "phone",
+      "x": 380,
+      "y": 330,
+      "scale": 0.75,
+      "lit": false
+     },
+     {
+      "id": "p2",
+      "kind": "phone",
+      "x": 610,
+      "y": 330,
+      "scale": 0.75,
+      "lit": false
+     },
+     {
+      "id": "p3",
+      "kind": "phone",
+      "x": 840,
+      "y": 330,
+      "scale": 0.75,
+      "lit": false
+     },
+     {
+      "id": "p4",
+      "kind": "phone",
+      "x": 1070,
+      "y": 330,
+      "scale": 0.75,
+      "lit": false
+     }
+    ]
+   }
+  },
+  {
+   "id": "s18",
+   "text": "MOST.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "p0",
+      "kind": "phone",
+      "x": 150,
+      "y": 330,
+      "scale": 0.75,
+      "lit": false,
+      "opacity": [
+       [
+        0.2,
+        1
+       ],
+       [
+        1.2,
+        0.35
+       ]
+      ],
+      "blur": [
+       [
+        0.2,
+        0
+       ],
+       [
+        1.2,
+        3
+       ]
+      ]
+     },
+     {
+      "id": "p1",
+      "kind": "phone",
+      "x": 380,
+      "y": 330,
+      "scale": 0.75,
+      "lit": false,
+      "opacity": [
+       [
+        0.2,
+        1
+       ],
+       [
+        1.2,
+        0.35
+       ]
+      ],
+      "blur": [
+       [
+        0.2,
+        0
+       ],
+       [
+        1.2,
+        3
+       ]
+      ]
+     },
+     {
+      "id": "p2",
+      "kind": "phone",
+      "x": 610,
+      "y": 330,
+      "scale": [
+       [
+        0,
+        0.75
+       ],
+       [
+        1.0,
+        1.05
+       ]
+      ],
+      "lit": false,
+      "litAt": 0.3,
+      "ring": [
+       0.4,
+       99
+      ]
+     },
+     {
+      "id": "p3",
+      "kind": "phone",
+      "x": 840,
+      "y": 330,
+      "scale": 0.75,
+      "lit": false,
+      "opacity": [
+       [
+        0.2,
+        1
+       ],
+       [
+        1.2,
+        0.35
+       ]
+      ],
+      "blur": [
+       [
+        0.2,
+        0
+       ],
+       [
+        1.2,
+        3
+       ]
+      ]
+     },
+     {
+      "id": "p4",
+      "kind": "phone",
+      "x": 1070,
+      "y": 330,
+      "scale": 0.75,
+      "lit": false,
+      "opacity": [
+       [
+        0.2,
+        1
+       ],
+       [
+        1.2,
+        0.35
+       ]
+      ],
+      "blur": [
+       [
+        0.2,
+        0
+       ],
+       [
+        1.2,
+        3
+       ]
+      ]
+     }
+    ]
+   },
+   "fx": [
+    {
+     "t": 0.2,
+     "type": "glitch",
+     "d": 0.3,
+     "s": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s19",
+   "text": "RULE ONE. COUNT THE RINGS.",
+   "visual": {
+    "tpl": "rule",
+    "n": 1,
+    "title": "COUNT THE RINGS",
+    "total": 7
+   }
+  },
+  {
+   "id": "s20",
+   "text": "LET IT RING THREE TIMES.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 609,
+      "y": 220,
+      "scale": 1.25,
+      "lit": true,
+      "ring": true
+     },
+     {
+      "kind": "box",
+      "x": 540,
+      "y": 400,
+      "size": 56,
+      "label": "1",
+      "t0": 0.4
+     },
+     {
+      "kind": "box",
+      "x": 609,
+      "y": 400,
+      "size": 56,
+      "label": "2",
+      "t0": 1.0
+     },
+     {
+      "kind": "box",
+      "x": 678,
+      "y": 400,
+      "size": 56,
+      "label": "3",
+      "t0": 1.6
+     }
+    ]
+   }
+  },
+  {
+   "id": "s21",
+   "text": "NOT TWO.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 609,
+      "y": 220,
+      "scale": 1.25,
+      "lit": true,
+      "ring": true
+     },
+     {
+      "kind": "box",
+      "x": 540,
+      "y": 400,
+      "size": 56,
+      "label": "1",
+      "t0": 0
+     },
+     {
+      "kind": "box",
+      "x": 609,
+      "y": 400,
+      "size": 56,
+      "label": "2",
+      "t0": 0
+     },
+     {
+      "kind": "cross",
+      "x": 574,
+      "y": 400,
+      "w": 150,
+      "h": 80,
+      "stroke": 12,
+      "t0": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "id": "s22",
+   "text": "NOT FOUR.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 609,
+      "y": 220,
+      "scale": 1.25,
+      "lit": true,
+      "ring": true
+     },
+     {
+      "kind": "box",
+      "x": 504,
+      "y": 400,
+      "size": 56,
+      "label": "1",
+      "t0": 0
+     },
+     {
+      "kind": "box",
+      "x": 574,
+      "y": 400,
+      "size": 56,
+      "label": "2",
+      "t0": 0
+     },
+     {
+      "kind": "box",
+      "x": 644,
+      "y": 400,
+      "size": 56,
+      "label": "3",
+      "t0": 0
+     },
+     {
+      "kind": "box",
+      "x": 714,
+      "y": 400,
+      "size": 56,
+      "label": "4",
+      "t0": 0
+     },
+     {
+      "kind": "cross",
+      "x": 714,
+      "y": 400,
+      "w": 80,
+      "h": 80,
+      "stroke": 12,
+      "t0": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "id": "s23",
+   "text": "THE RINGS ARE NOT FOR YOU.",
+   "visual": {
+    "tpl": "stage",
+    "set": "bedroom",
+    "setArgs": {
+     "time": "3:07",
+     "wake": 0
+    },
+    "zoom": 1.3,
+    "focus": [
+     650,
+     300
+    ],
+    "items": [
+     {
+      "id": "ns",
+      "kind": "nightstand",
+      "x": 500,
+      "y": 435,
+      "scale": 1
+     },
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 500,
+      "y": 302,
+      "scale": 0.5,
+      "lit": true,
+      "ring": true
+     }
+    ]
+   }
+  },
+  {
+   "id": "s24",
+   "text": "THEY ARE HOW IT CHECKS IF YOU ARE REALLY ASLEEP.",
+   "visual": {
+    "tpl": "stage",
+    "set": "bedroom",
+    "setArgs": {
+     "time": "3:07",
+     "wake": 0
+    },
+    "zoom": 1.3,
+    "focus": [
+     650,
+     300
+    ],
+    "items": [
+     {
+      "id": "ns",
+      "kind": "nightstand",
+      "x": 500,
+      "y": 435,
+      "scale": 1
+     },
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 500,
+      "y": 302,
+      "scale": 0.5,
+      "lit": true,
+      "ring": [
+       0,
+       0
+      ]
+     },
+     {
+      "id": "eye",
+      "kind": "eye",
+      "x": 900,
+      "y": 135,
+      "scale": 0.5,
+      "blink": true
+     }
+    ],
+    "links": [
+     {
+      "style": "gaze",
+      "from": [
+       900,
+       160
+      ],
+      "to": "bed@head",
+      "start": 0.5,
+      "dur": 0.7
+     }
+    ]
+   }
+  },
+  {
+   "id": "s25",
+   "text": "IF YOU ANSWER ON THE FIRST RING...",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 609,
+      "y": 250,
+      "scale": 1.7,
+      "lit": true,
+      "label": "UNKNOWN",
+      "sub": "INCOMING CALL",
+      "buttons": true,
+      "ring": true
+     }
+    ]
+   }
+  },
+  {
+   "id": "s26",
+   "text": "IT KNOWS YOU WERE WAITING.",
+   "visual": {
+    "tpl": "stage",
+    "set": "bedroom",
+    "setArgs": {
+     "time": "3:07",
+     "wake": [
+      [
+       0.2,
+       0
+      ],
+      [
+       0.9,
+       1
+      ]
+     ]
+    },
+    "zoom": 1.3,
+    "focus": [
+     650,
+     300
+    ],
+    "items": [
+     {
+      "id": "ns",
+      "kind": "nightstand",
+      "x": 500,
+      "y": 435,
+      "scale": 1
+     },
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 500,
+      "y": 302,
+      "scale": 0.5,
+      "lit": true,
+      "ring": true
+     },
+     {
+      "kind": "sweat",
+      "x": 705,
+      "y": 262,
+      "scale": 1.3,
+      "t0": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "id": "s27",
+   "text": "SO WAIT.",
+   "visual": {
+    "tpl": "stage",
+    "set": "bedroom",
+    "setArgs": {
+     "time": "3:07",
+     "wake": 0
+    },
+    "zoom": 1.3,
+    "focus": [
+     650,
+     300
+    ],
+    "items": [
+     {
+      "id": "ns",
+      "kind": "nightstand",
+      "x": 500,
+      "y": 435,
+      "scale": 1
+     },
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 500,
+      "y": 302,
+      "scale": 0.5,
+      "lit": true,
+      "ring": true
+     }
+    ]
+   }
+  },
+  {
+   "id": "s28",
+   "text": "IT HAS ALL NIGHT.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "kind": "clock",
+      "x": 609,
+      "y": 250,
+      "scale": 2.6,
+      "time": "3:07",
+      "run": 12
+     },
+     {
+      "kind": "moon",
+      "x": 1010,
+      "y": 120,
+      "r": 30
+     }
+    ]
+   }
+  },
+  {
+   "id": "s29",
+   "text": "YOU DO NOT.",
+   "visual": {
+    "tpl": "stage",
+    "set": "bedroom",
+    "setArgs": {
+     "time": "3:07",
+     "wake": 0
+    },
+    "zoom": 1.3,
+    "focus": [
+     650,
+     300
+    ],
+    "items": [
+     {
+      "id": "ns",
+      "kind": "nightstand",
+      "x": 500,
+      "y": 435,
+      "scale": 1
+     }
+    ]
+   },
+   "fx": [
+    {
+     "t": 0.3,
+     "type": "glitch",
+     "d": 0.5,
+     "s": 0.9
+    }
+   ]
+  },
+  {
+   "id": "s30",
+   "text": "RULE TWO. LET IT SPEAK FIRST.",
+   "visual": {
+    "tpl": "rule",
+    "n": 2,
+    "title": "LET IT SPEAK FIRST",
+    "total": 7
+   }
+  },
+  {
+   "id": "s31",
+   "text": "PRESS ANSWER. SAY NOTHING.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 609,
+      "y": 250,
+      "scale": 1.7,
+      "lit": true,
+      "label": "UNKNOWN",
+      "sub": "CONNECTED",
+      "buttons": true
+     }
+    ]
+   }
+  },
+  {
+   "id": "s32",
+   "text": "IF YOU WANT TO ASK WHO IS THERE, DON'T.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "kind": "bubble",
+      "x": 609,
+      "y": 230,
+      "text": "WHO IS THERE?",
+      "size": 36,
+      "tail": "none"
+     },
+     {
+      "kind": "cross",
+      "x": 609,
+      "y": 230,
+      "w": 420,
+      "h": 120,
+      "stroke": 14,
+      "t0": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "id": "s33",
+   "text": "IF YOU WANT TO SAY YOUR NAME, DON'T.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "kind": "bubble",
+      "x": 609,
+      "y": 230,
+      "text": "MY NAME IS...",
+      "size": 36,
+      "tail": "none"
+     },
+     {
+      "kind": "cross",
+      "x": 609,
+      "y": 230,
+      "w": 420,
+      "h": 120,
+      "stroke": 14,
+      "t0": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "id": "s34",
+   "text": "HOLD THE PHONE. LET THE SILENCE SIT.",
+   "visual": {
+    "tpl": "stage",
+    "set": "bedroom",
+    "setArgs": {
+     "time": "3:07",
+     "wake": 1
+    },
+    "zoom": 1.3,
+    "focus": [
+     650,
+     300
+    ],
+    "items": [
+     {
+      "id": "ns",
+      "kind": "nightstand",
+      "x": 500,
+      "y": 435,
+      "scale": 1
+     },
+     {
+      "kind": "phone",
+      "x": 700,
+      "y": 262,
+      "scale": 0.5,
+      "rot": -20,
+      "waves": true
+     }
+    ]
+   }
+  },
+  {
+   "id": "s35",
+   "text": "THERE WILL BE BREATHING.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 609,
+      "y": 250,
+      "scale": 1.7,
+      "lit": true,
+      "waves": true
+     }
+    ]
+   }
+  },
+  {
+   "id": "s36",
+   "text": "IT IS NOT YOURS.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 609,
+      "y": 250,
+      "scale": 1.7,
+      "lit": true,
+      "waves": true
+     }
+    ]
+   },
+   "fx": [
+    {
+     "t": 0.5,
+     "type": "glitch",
+     "d": 0.4,
+     "s": 0.8
+    }
+   ]
+  },
+  {
+   "id": "s37",
+   "text": "YOU HAVE BEEN HOLDING YOUR OWN.",
+   "visual": {
+    "tpl": "stage",
+    "set": "bedroom",
+    "setArgs": {
+     "time": "3:07",
+     "wake": 1
+    },
+    "zoom": 1.3,
+    "focus": [
+     650,
+     300
+    ],
+    "items": [
+     {
+      "id": "ns",
+      "kind": "nightstand",
+      "x": 500,
+      "y": 435,
+      "scale": 1
+     },
+     {
+      "kind": "phone",
+      "x": 700,
+      "y": 262,
+      "scale": 0.5,
+      "rot": -20,
+      "waves": false
+     },
+     {
+      "kind": "sweat",
+      "x": 690,
+      "y": 238,
+      "scale": 1.3
+     }
+    ]
+   }
+  },
+  {
+   "id": "s38",
+   "text": "GOOD.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "kind": "check",
+      "x": 609,
+      "y": 250,
+      "scale": 3.2
+     }
+    ]
+   }
+  },
+  {
+   "id": "s39",
+   "text": "RULE THREE. SAY NEITHER YES NOR NO.",
+   "visual": {
+    "tpl": "rule",
+    "n": 3,
+    "title": "SAY NEITHER YES NOR NO",
+    "total": 7
+   }
+  },
+  {
+   "id": "s40",
+   "text": "IT WILL ASK YOU SOMETHING SMALL.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "kind": "phone",
+      "x": 380,
+      "y": 290,
+      "scale": 1.1,
+      "waves": true
+     },
+     {
+      "kind": "bubble",
+      "x": 820,
+      "y": 220,
+      "text": "...",
+      "size": 30,
+      "tail": "left"
+     }
+    ]
+   }
+  },
+  {
+   "id": "s41",
+   "text": "ARE YOU HOME?",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "kind": "phone",
+      "x": 380,
+      "y": 290,
+      "scale": 1.1,
+      "waves": true
+     },
+     {
+      "kind": "bubble",
+      "x": 820,
+      "y": 220,
+      "text": "ARE YOU HOME?",
+      "size": 30,
+      "tail": "left"
+     }
+    ]
+   }
+  },
+  {
+   "id": "s42",
+   "text": "IS THE DOOR LOCKED?",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "kind": "phone",
+      "x": 380,
+      "y": 290,
+      "scale": 1.1,
+      "waves": true
+     },
+     {
+      "kind": "bubble",
+      "x": 760,
+      "y": 220,
+      "text": "IS THE DOOR LOCKED?",
+      "size": 30,
+      "tail": "left"
+     },
+     {
+      "kind": "door",
+      "x": 1090,
+      "y": 440,
+      "scale": 0.7
+     }
+    ]
+   }
+  },
+  {
+   "id": "s43",
+   "text": "ARE YOU ALONE?",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "kind": "phone",
+      "x": 380,
+      "y": 290,
+      "scale": 1.1,
+      "waves": true
+     },
+     {
+      "kind": "bubble",
+      "x": 820,
+      "y": 220,
+      "text": "ARE YOU ALONE?",
+      "size": 30,
+      "tail": "left"
+     }
+    ]
+   },
+   "fx": [
+    {
+     "t": 0.8,
+     "type": "glitch",
+     "d": 0.4,
+     "s": 0.8
+    }
+   ]
+  },
+  {
+   "id": "s44",
+   "text": "THE ANSWER IS NOT YES.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "kind": "bubble",
+      "x": 609,
+      "y": 230,
+      "text": "YES",
+      "size": 64,
+      "tail": "none"
+     },
+     {
+      "kind": "cross",
+      "x": 609,
+      "y": 230,
+      "w": 260,
+      "h": 150,
+      "stroke": 14,
+      "t0": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "id": "s45",
+   "text": "THE ANSWER IS NOT NO.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "kind": "bubble",
+      "x": 609,
+      "y": 230,
+      "text": "NO",
+      "size": 64,
+      "tail": "none"
+     },
+     {
+      "kind": "cross",
+      "x": 609,
+      "y": 230,
+      "w": 260,
+      "h": 150,
+      "stroke": 14,
+      "t0": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "id": "s46",
+   "text": "THE ANSWER IS SILENCE.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 609,
+      "y": 250,
+      "scale": 1.7,
+      "lit": true,
+      "label": "UNKNOWN",
+      "sub": "CONNECTED"
+     },
+     {
+      "kind": "check",
+      "x": 800,
+      "y": 160,
+      "scale": 2.2,
+      "t0": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "id": "s47",
+   "text": "EVERY WORD YOU GIVE IT, IT KEEPS.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "kind": "phone",
+      "x": 930,
+      "y": 280,
+      "scale": 1.1,
+      "waves": true
+     },
+     {
+      "kind": "text",
+      "x": [
+       [
+        0,
+        300
+       ],
+       [
+        1.3,
+        860
+       ]
+      ],
+      "y": 240,
+      "text": "YES",
+      "size": 36,
+      "opacity": [
+       [
+        0,
+        0
+       ],
+       [
+        0.2,
+        1
+       ],
+       [
+        1.1,
+        1
+       ],
+       [
+        1.4,
+        0
+       ]
+      ]
+     },
+     {
+      "kind": "text",
+      "x": [
+       [
+        0.5,
+        300
+       ],
+       [
+        1.8,
+        860
+       ]
+      ],
+      "y": 300,
+      "text": "NO",
+      "size": 36,
+      "opacity": [
+       [
+        0.5,
+        0
+       ],
+       [
+        0.7,
+        1
+       ],
+       [
+        1.6,
+        1
+       ],
+       [
+        1.9,
+        0
+       ]
+      ]
+     },
+     {
+      "kind": "text",
+      "x": [
+       [
+        1.0,
+        300
+       ],
+       [
+        2.3,
+        860
+       ]
+      ],
+      "y": 360,
+      "text": "HELLO",
+      "size": 36,
+      "opacity": [
+       [
+        1.0,
+        0
+       ],
+       [
+        1.2,
+        1
+       ],
+       [
+        2.1,
+        1
+       ],
+       [
+        2.4,
+        0
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "s48",
+   "text": "EVERY WORD IT KEEPS, IT CAN USE.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "kind": "phone",
+      "x": 900,
+      "y": 280,
+      "scale": 1.1,
+      "waves": true
+     },
+     {
+      "kind": "bubble",
+      "x": 420,
+      "y": 230,
+      "text": "IT'S ME.",
+      "size": 40,
+      "tail": "right",
+      "color": "accent",
+      "t0": 0.4
+     }
+    ]
+   },
+   "fx": [
+    {
+     "t": 0.6,
+     "type": "glitch",
+     "d": 0.4,
+     "s": 0.7
+    }
+   ]
+  },
+  {
+   "id": "s49",
+   "text": "RULE FOUR. KEEP THE LIGHTS OFF.",
+   "visual": {
+    "tpl": "rule",
+    "n": 4,
+    "title": "KEEP THE LIGHTS OFF",
+    "total": 7
+   }
+  },
+  {
+   "id": "s50",
+   "text": "YOU WILL WANT TO SEE THE SCREEN.",
+   "visual": {
+    "tpl": "stage",
+    "set": "bedroom",
+    "setArgs": {
+     "time": "3:07",
+     "wake": 1
+    },
+    "zoom": 1.3,
+    "focus": [
+     650,
+     300
+    ],
+    "items": [
+     {
+      "id": "ns",
+      "kind": "nightstand",
+      "x": 500,
+      "y": 435,
+      "scale": 1
+     },
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 500,
+      "y": 302,
+      "scale": 0.5,
+      "lit": true,
+      "ring": true
+     }
+    ]
+   }
+  },
+  {
+   "id": "s51",
+   "text": "YOU WILL WANT TO SEE THE ROOM.",
+   "visual": {
+    "tpl": "stage",
+    "set": "bedroom",
+    "setArgs": {
+     "time": "3:07",
+     "wake": 1
+    },
+    "zoom": 1.3,
+    "focus": [
+     650,
+     300
+    ],
+    "items": [
+     {
+      "id": "ns",
+      "kind": "nightstand",
+      "x": 500,
+      "y": 435,
+      "scale": 1
+     },
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 500,
+      "y": 302,
+      "scale": 0.5,
+      "lit": true,
+      "ring": true
+     },
+     {
+      "id": "lamp",
+      "kind": "lamp",
+      "x": 300,
+      "y": 435,
+      "on": false
+     }
+    ]
+   }
+  },
+  {
+   "id": "s52",
+   "text": "DO NOT.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "kind": "lamp",
+      "x": 609,
+      "y": 440,
+      "scale": 1.6,
+      "on": false
+     },
+     {
+      "kind": "cross",
+      "x": 609,
+      "y": 290,
+      "w": 260,
+      "h": 300,
+      "stroke": 14,
+      "t0": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "id": "s53",
+   "text": "LIGHT TELLS IT WHERE YOU ARE.",
+   "visual": {
+    "tpl": "stage",
+    "set": "bedroom",
+    "setArgs": {
+     "time": "3:07",
+     "wake": 0
+    },
+    "zoom": 1.3,
+    "focus": [
+     650,
+     300
+    ],
+    "items": [
+     {
+      "id": "ns",
+      "kind": "nightstand",
+      "x": 500,
+      "y": 435,
+      "scale": 1
+     },
+     {
+      "id": "lamp",
+      "kind": "lamp",
+      "x": 300,
+      "y": 435
+     },
+     {
+      "id": "eye",
+      "kind": "eye",
+      "x": 560,
+      "y": 135,
+      "scale": 0.55,
+      "blink": true
+     }
+    ],
+    "links": [
+     {
+      "style": "gaze",
+      "from": [
+       560,
+       165
+      ],
+      "to": "bed@head",
+      "start": 0.5,
+      "dur": 0.6
+     },
+     {
+      "style": "gaze",
+      "from": [
+       560,
+       165
+      ],
+      "to": "lamp",
+      "start": 0.7,
+      "dur": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "id": "s54",
+   "text": "IF YOU ALREADY REACHED FOR THE LAMP...",
+   "visual": {
+    "tpl": "stage",
+    "set": "bedroom",
+    "setArgs": {
+     "time": "3:07",
+     "wake": 0
+    },
+    "zoom": 1.3,
+    "focus": [
+     650,
+     300
+    ],
+    "items": [
+     {
+      "id": "ns",
+      "kind": "nightstand",
+      "x": 500,
+      "y": 435,
+      "scale": 1
+     },
+     {
+      "id": "lamp",
+      "kind": "lamp",
+      "x": 300,
+      "y": 435,
+      "onAt": 0.6
+     }
+    ]
+   },
+   "fx": [
+    {
+     "t": 0.6,
+     "type": "glitch",
+     "d": 0.4,
+     "s": 0.8
+    }
+   ]
+  },
+  {
+   "id": "s55",
+   "text": "TURN IT OFF.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "kind": "lamp",
+      "x": 609,
+      "y": 440,
+      "scale": 1.6,
+      "offAt": 0.9
+     }
+    ]
+   }
+  },
+  {
+   "id": "s56",
+   "text": "SLOWLY.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "kind": "lamp",
+      "x": 609,
+      "y": 440,
+      "scale": 1.6,
+      "opacity": [
+       [
+        0.2,
+        1
+       ],
+       [
+        2.0,
+        0.25
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "s57",
+   "text": "MOST PEOPLE REACH FOR THE LAMP.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "l0",
+      "kind": "lamp",
+      "x": 150,
+      "y": 440,
+      "scale": 0.75,
+      "flicker": true
+     },
+     {
+      "id": "l1",
+      "kind": "lamp",
+      "x": 380,
+      "y": 440,
+      "scale": 0.75,
+      "flicker": true
+     },
+     {
+      "id": "l2",
+      "kind": "lamp",
+      "x": 610,
+      "y": 440,
+      "scale": 0.75,
+      "flicker": true
+     },
+     {
+      "id": "l3",
+      "kind": "lamp",
+      "x": 840,
+      "y": 440,
+      "scale": 0.75,
+      "flicker": true
+     },
+     {
+      "id": "l4",
+      "kind": "lamp",
+      "x": 1070,
+      "y": 440,
+      "scale": 0.75,
+      "flicker": true
+     }
+    ]
+   }
+  },
+  {
+   "id": "s58",
+   "text": "THAT IS HOW IT FINDS THEM.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "l0",
+      "kind": "lamp",
+      "x": 150,
+      "y": 440,
+      "scale": 0.75,
+      "opacity": [
+       [
+        0.2,
+        1
+       ],
+       [
+        1.2,
+        0.35
+       ]
+      ],
+      "blur": [
+       [
+        0.2,
+        0
+       ],
+       [
+        1.2,
+        3
+       ]
+      ]
+     },
+     {
+      "id": "l1",
+      "kind": "lamp",
+      "x": 380,
+      "y": 440,
+      "scale": 0.75,
+      "opacity": [
+       [
+        0.2,
+        1
+       ],
+       [
+        1.2,
+        0.35
+       ]
+      ],
+      "blur": [
+       [
+        0.2,
+        0
+       ],
+       [
+        1.2,
+        3
+       ]
+      ]
+     },
+     {
+      "id": "l2",
+      "kind": "lamp",
+      "x": 610,
+      "y": 440,
+      "scale": 0.75
+     },
+     {
+      "id": "l3",
+      "kind": "lamp",
+      "x": 840,
+      "y": 440,
+      "scale": 0.75,
+      "opacity": [
+       [
+        0.2,
+        1
+       ],
+       [
+        1.2,
+        0.35
+       ]
+      ],
+      "blur": [
+       [
+        0.2,
+        0
+       ],
+       [
+        1.2,
+        3
+       ]
+      ]
+     },
+     {
+      "id": "l4",
+      "kind": "lamp",
+      "x": 1070,
+      "y": 440,
+      "scale": 0.75,
+      "opacity": [
+       [
+        0.2,
+        1
+       ],
+       [
+        1.2,
+        0.35
+       ]
+      ],
+      "blur": [
+       [
+        0.2,
+        0
+       ],
+       [
+        1.2,
+        3
+       ]
+      ]
+     },
+     {
+      "id": "eye",
+      "kind": "eye",
+      "x": 609,
+      "y": 90,
+      "scale": 0.8,
+      "blink": true
+     }
+    ],
+    "links": [
+     {
+      "style": "gaze",
+      "from": [
+       609,
+       125
+      ],
+      "to": "l2",
+      "start": 0.5,
+      "dur": 0.6
+     }
+    ]
+   },
+   "fx": [
+    {
+     "t": 0.3,
+     "type": "glitch",
+     "d": 0.3,
+     "s": 0.6
+    }
+   ]
+  },
+  {
+   "id": "s59",
+   "text": "RULE FIVE. DO NOT HANG UP FIRST.",
+   "visual": {
+    "tpl": "rule",
+    "n": 5,
+    "title": "DO NOT HANG UP FIRST",
+    "total": 7
+   }
+  },
+  {
+   "id": "s60",
+   "text": "THE VOICE WILL STOP.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 609,
+      "y": 250,
+      "scale": 1.7,
+      "lit": true,
+      "label": "UNKNOWN",
+      "sub": "CONNECTED",
+      "waves": [
+       0,
+       1.1
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "s61",
+   "text": "THE LINE WILL GO QUIET.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 609,
+      "y": 250,
+      "scale": 1.7,
+      "lit": true,
+      "label": "UNKNOWN",
+      "sub": "CONNECTED"
+     }
+    ]
+   }
+  },
+  {
+   "id": "s62",
+   "text": "THE CALL WILL FEEL LIKE IT IS OVER.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 609,
+      "y": 250,
+      "scale": 1.7,
+      "lit": true,
+      "label": ". . .",
+      "sub": "LINE QUIET"
+     }
+    ]
+   }
+  },
+  {
+   "id": "s63",
+   "text": "DO NOT PRESS THE RED BUTTON.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 609,
+      "y": 250,
+      "scale": 2.2,
+      "lit": true,
+      "label": "UNKNOWN",
+      "sub": "CONNECTED",
+      "buttons": true
+     },
+     {
+      "kind": "cross",
+      "x": 640,
+      "y": 334,
+      "w": 70,
+      "h": 70,
+      "stroke": 10,
+      "t0": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "id": "s64",
+   "text": "WAIT FOR THE CLICK.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 609,
+      "y": 250,
+      "scale": 2.0,
+      "lit": true,
+      "label": "UNKNOWN",
+      "sub": "CONNECTED",
+      "buttons": true
+     },
+     {
+      "kind": "text",
+      "x": 609,
+      "y": 440,
+      "text": "CLICK",
+      "size": 40,
+      "t0": 1.2
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "t": 1.2,
+     "name": "hit",
+     "vol": 0.9
+    }
+   ]
+  },
+  {
+   "id": "s65",
+   "text": "IT ALWAYS HANGS UP FIRST.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 609,
+      "y": 250,
+      "scale": 1.7,
+      "lit": false
+     },
+     {
+      "kind": "check",
+      "x": 800,
+      "y": 160,
+      "scale": 2.2,
+      "t0": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "id": "s66",
+   "text": "IF YOU HANG UP BEFORE IT DOES...",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 609,
+      "y": 250,
+      "scale": 2.2,
+      "lit": true,
+      "label": "UNKNOWN",
+      "sub": "CONNECTED",
+      "buttons": true
+     }
+    ]
+   },
+   "fx": [
+    {
+     "t": 0.8,
+     "type": "flash",
+     "d": 0.2,
+     "s": 0.7
+    }
+   ]
+  },
+  {
+   "id": "s67",
+   "text": "THE CALL IS NOT OVER.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 609,
+      "y": 250,
+      "scale": 1.7,
+      "lit": true,
+      "label": "UNKNOWN",
+      "sub": "CALLING...",
+      "ring": true
+     }
+    ]
+   },
+   "fx": [
+    {
+     "t": 0.3,
+     "type": "glitch",
+     "d": 0.5,
+     "s": 0.9
+    }
+   ],
+   "transition": "glitch"
+  },
+  {
+   "id": "s68",
+   "text": "IT JUST MOVES.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "p1",
+      "kind": "phone",
+      "x": 380,
+      "y": 290,
+      "scale": 1.0,
+      "lit": false
+     },
+     {
+      "id": "p2",
+      "kind": "phone",
+      "x": 850,
+      "y": 290,
+      "scale": 1.0,
+      "ring": true,
+      "t0": 0.6
+     }
+    ],
+    "links": [
+     {
+      "style": "dotted",
+      "from": [
+       430,
+       290
+      ],
+      "to": [
+       790,
+       290
+      ],
+      "start": 0.3,
+      "dur": 0.7
+     }
+    ]
+   }
+  },
+  {
+   "id": "s69",
+   "text": "RULE SIX. SAY IT WAS A WRONG NUMBER.",
+   "visual": {
+    "tpl": "rule",
+    "n": 6,
+    "title": "SAY IT WAS A WRONG NUMBER",
+    "total": 7
+   }
+  },
+  {
+   "id": "s70",
+   "text": "SOMEONE ELSE IN THE HOUSE WILL WAKE.",
+   "visual": {
+    "tpl": "stage",
+    "set": "bedroom",
+    "setArgs": {
+     "time": "3:07",
+     "wake": 0
+    },
+    "zoom": 1.3,
+    "focus": [
+     650,
+     300
+    ],
+    "items": [
+     {
+      "id": "ns",
+      "kind": "nightstand",
+      "x": 500,
+      "y": 435,
+      "scale": 1
+     },
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 500,
+      "y": 302,
+      "scale": 0.5,
+      "lit": false
+     },
+     {
+      "id": "him",
+      "kind": "person",
+      "pose": "stand",
+      "x": 1010,
+      "y": 440,
+      "scale": 1.3,
+      "fill": "#9c9c9c",
+      "t0": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "id": "s71",
+   "text": "THEY WILL ASK WHO CALLED.",
+   "visual": {
+    "tpl": "stage",
+    "set": "bedroom",
+    "setArgs": {
+     "time": "3:07",
+     "wake": 0
+    },
+    "zoom": 1.3,
+    "focus": [
+     650,
+     300
+    ],
+    "items": [
+     {
+      "id": "ns",
+      "kind": "nightstand",
+      "x": 500,
+      "y": 435,
+      "scale": 1
+     },
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 500,
+      "y": 302,
+      "scale": 0.5,
+      "lit": false
+     },
+     {
+      "id": "him",
+      "kind": "person",
+      "pose": "stand",
+      "x": 1010,
+      "y": 440,
+      "scale": 1.3,
+      "fill": "#9c9c9c",
+      "t0": 0.8
+     },
+     {
+      "kind": "bubble",
+      "x": 930,
+      "y": 170,
+      "text": "WHO WAS THAT?",
+      "size": 22,
+      "tail": "down",
+      "t0": 1.1
+     }
+    ]
+   }
+  },
+  {
+   "id": "s72",
+   "text": "THEY WILL SOUND SLEEPY.",
+   "visual": {
+    "tpl": "stage",
+    "set": "bedroom",
+    "setArgs": {
+     "time": "3:07",
+     "wake": 0
+    },
+    "zoom": 1.3,
+    "focus": [
+     650,
+     300
+    ],
+    "items": [
+     {
+      "id": "ns",
+      "kind": "nightstand",
+      "x": 500,
+      "y": 435,
+      "scale": 1
+     },
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 500,
+      "y": 302,
+      "scale": 0.5,
+      "lit": false
+     },
+     {
+      "id": "him",
+      "kind": "person",
+      "pose": "stand",
+      "x": 1010,
+      "y": 440,
+      "scale": 1.3,
+      "fill": "#9c9c9c",
+      "t0": 0.8
+     },
+     {
+      "kind": "bubble",
+      "x": 930,
+      "y": 170,
+      "text": "MMM...?",
+      "size": 24,
+      "tail": "down",
+      "t0": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "id": "s73",
+   "text": "THEY WILL SOUND FAMILIAR.",
+   "visual": {
+    "tpl": "stage",
+    "set": "bedroom",
+    "setArgs": {
+     "time": "3:07",
+     "wake": 0
+    },
+    "zoom": 1.3,
+    "focus": [
+     650,
+     300
+    ],
+    "items": [
+     {
+      "id": "ns",
+      "kind": "nightstand",
+      "x": 500,
+      "y": 435,
+      "scale": 1
+     },
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 500,
+      "y": 302,
+      "scale": 0.5,
+      "lit": false
+     },
+     {
+      "id": "him",
+      "kind": "person",
+      "pose": "stand",
+      "x": 1010,
+      "y": 440,
+      "scale": 1.3,
+      "fill": "#9c9c9c",
+      "t0": 0
+     },
+     {
+      "kind": "bubble",
+      "x": 930,
+      "y": 170,
+      "text": "WHO WAS THAT?",
+      "size": 22,
+      "tail": "down",
+      "t0": 0.3
+     }
+    ]
+   },
+   "fx": [
+    {
+     "t": 1.0,
+     "type": "glitch",
+     "d": 0.5,
+     "s": 0.8
+    }
+   ]
+  },
+  {
+   "id": "s74",
+   "text": "SAY IT WAS A WRONG NUMBER.",
+   "visual": {
+    "tpl": "stage",
+    "set": "bedroom",
+    "setArgs": {
+     "time": "3:07",
+     "wake": 1
+    },
+    "zoom": 1.3,
+    "focus": [
+     650,
+     300
+    ],
+    "items": [
+     {
+      "id": "ns",
+      "kind": "nightstand",
+      "x": 500,
+      "y": 435,
+      "scale": 1
+     },
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 500,
+      "y": 302,
+      "scale": 0.5,
+      "lit": false
+     },
+     {
+      "id": "him",
+      "kind": "person",
+      "pose": "stand",
+      "x": 1010,
+      "y": 440,
+      "scale": 1.3,
+      "fill": "#9c9c9c",
+      "t0": 0
+     },
+     {
+      "kind": "bubble",
+      "x": 560,
+      "y": 170,
+      "text": "WRONG NUMBER.",
+      "size": 24,
+      "tail": "right",
+      "t0": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "id": "s75",
+   "text": "SAY IT ONCE.",
+   "visual": {
+    "tpl": "stage",
+    "set": "bedroom",
+    "setArgs": {
+     "time": "3:07",
+     "wake": 1
+    },
+    "zoom": 1.3,
+    "focus": [
+     650,
+     300
+    ],
+    "items": [
+     {
+      "id": "ns",
+      "kind": "nightstand",
+      "x": 500,
+      "y": 435,
+      "scale": 1
+     },
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 500,
+      "y": 302,
+      "scale": 0.5,
+      "lit": false
+     },
+     {
+      "id": "him",
+      "kind": "person",
+      "pose": "stand",
+      "x": 1010,
+      "y": 440,
+      "scale": 1.3,
+      "fill": "#9c9c9c",
+      "t0": 0
+     },
+     {
+      "kind": "bubble",
+      "x": 560,
+      "y": 170,
+      "text": "WRONG NUMBER.",
+      "size": 24,
+      "tail": "right"
+     },
+     {
+      "kind": "check",
+      "x": 420,
+      "y": 120,
+      "scale": 1.6,
+      "t0": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "id": "s76",
+   "text": "IF THEY ASK AGAIN...",
+   "visual": {
+    "tpl": "stage",
+    "set": "bedroom",
+    "setArgs": {
+     "time": "3:07",
+     "wake": 0
+    },
+    "zoom": 1.3,
+    "focus": [
+     650,
+     300
+    ],
+    "items": [
+     {
+      "id": "ns",
+      "kind": "nightstand",
+      "x": 500,
+      "y": 435,
+      "scale": 1
+     },
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 500,
+      "y": 302,
+      "scale": 0.5,
+      "lit": false
+     },
+     {
+      "id": "him",
+      "kind": "person",
+      "pose": "stand",
+      "x": [
+       [
+        0,
+        1010
+       ],
+       [
+        1.6,
+        820
+       ]
+      ],
+      "y": 440,
+      "scale": 1.3,
+      "fill": "#9c9c9c",
+      "t0": 0
+     },
+     {
+      "kind": "bubble",
+      "x": 880,
+      "y": 170,
+      "text": "WHO WAS THAT?",
+      "size": 22,
+      "tail": "down",
+      "scale": [
+       [
+        0,
+        1
+       ],
+       [
+        1.6,
+        1.2
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "s77",
+   "text": "THAT IS NOT THE PERSON YOU LIVE WITH.",
+   "visual": {
+    "tpl": "stage",
+    "set": "bedroom",
+    "setArgs": {
+     "time": "3:07",
+     "wake": 0
+    },
+    "zoom": 1.3,
+    "focus": [
+     650,
+     300
+    ],
+    "items": [
+     {
+      "id": "ns",
+      "kind": "nightstand",
+      "x": 500,
+      "y": 435,
+      "scale": 1
+     },
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 500,
+      "y": 302,
+      "scale": 0.5,
+      "lit": false
+     },
+     {
+      "id": "him",
+      "kind": "person",
+      "pose": "stand",
+      "x": 900,
+      "y": 440,
+      "scale": 1.7,
+      "fill": "#ffffff",
+      "t0": 0
+     }
+    ]
+   },
+   "fx": [
+    {
+     "t": 0.2,
+     "type": "glitch",
+     "d": 0.8,
+     "s": 1.0
+    }
+   ]
+  },
+  {
+   "id": "s78",
+   "text": "LIE DOWN. CLOSE YOUR EYES.",
+   "visual": {
+    "tpl": "stage",
+    "set": "bedroom",
+    "setArgs": {
+     "time": "3:07",
+     "wake": 0
+    },
+    "zoom": 1.3,
+    "focus": [
+     650,
+     300
+    ],
+    "items": [
+     {
+      "id": "ns",
+      "kind": "nightstand",
+      "x": 500,
+      "y": 435,
+      "scale": 1
+     }
+    ]
+   },
+   "fx": []
+  },
+  {
+   "id": "s79",
+   "text": "DO NOT LET IT SEE THAT YOU NOTICED.",
+   "visual": {
+    "tpl": "stage",
+    "set": "bedroom",
+    "setArgs": {
+     "time": "3:07",
+     "wake": 0
+    },
+    "zoom": 1.3,
+    "focus": [
+     650,
+     300
+    ],
+    "items": [
+     {
+      "id": "ns",
+      "kind": "nightstand",
+      "x": 500,
+      "y": 435,
+      "scale": 1
+     },
+     {
+      "id": "him",
+      "kind": "person",
+      "pose": "stand",
+      "x": 1010,
+      "y": 440,
+      "scale": 1.3,
+      "fill": "#9c9c9c",
+      "t0": 0
+     }
+    ],
+    "links": [
+     {
+      "style": "gaze",
+      "from": "him@head",
+      "to": "bed@head",
+      "start": 0.6,
+      "dur": 0.8
+     }
+    ]
+   },
+   "transition": "glitch"
+  },
+  {
+   "id": "s80",
+   "text": "IT IS 3:09 AM.",
+   "visual": {
+    "tpl": "stage",
+    "set": "bedroom",
+    "setArgs": {
+     "time": "3:09",
+     "wake": 0
+    },
+    "zoom": 1.3,
+    "focus": [
+     650,
+     300
+    ],
+    "items": [
+     {
+      "id": "ns",
+      "kind": "nightstand",
+      "x": 500,
+      "y": 435,
+      "scale": 1
+     },
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 500,
+      "y": 302,
+      "scale": 0.5,
+      "lit": false
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "t": 0,
+     "name": "riser",
+     "vol": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s81",
+   "text": "YOU SURVIVED THE CALL.",
+   "visual": {
+    "tpl": "stage",
+    "set": "bedroom",
+    "setArgs": {
+     "time": "3:09",
+     "wake": 1
+    },
+    "zoom": 1.3,
+    "focus": [
+     650,
+     300
+    ],
+    "items": [
+     {
+      "id": "ns",
+      "kind": "nightstand",
+      "x": 500,
+      "y": 435,
+      "scale": 1
+     },
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 500,
+      "y": 302,
+      "scale": 0.5,
+      "lit": false
+     },
+     {
+      "kind": "check",
+      "x": 470,
+      "y": 110,
+      "t0": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "id": "s82",
+   "text": "THE SCREEN SHOWS ONE MISSED CALL.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 609,
+      "y": 250,
+      "scale": 1.7,
+      "lit": true,
+      "label": "MISSED CALL",
+      "sub": "1 MISSED",
+      "labelSize": 7
+     }
+    ]
+   }
+  },
+  {
+   "id": "s83",
+   "text": "FROM YOUR OWN NUMBER.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 609,
+      "y": 250,
+      "scale": 1.7,
+      "lit": true,
+      "label": "YOU",
+      "sub": "MISSED CALL",
+      "labelSize": 17
+     }
+    ]
+   },
+   "fx": [
+    {
+     "t": 0.5,
+     "type": "glitch",
+     "d": 0.5,
+     "s": 0.8
+    }
+   ]
+  },
+  {
+   "id": "s84",
+   "text": "IT WAS NEVER A STRANGER.",
+   "visual": {
+    "tpl": "black"
+   },
+   "fx": [
+    {
+     "t": 0.2,
+     "type": "glitch",
+     "d": 0.7,
+     "s": 0.7
+    }
+   ]
+  },
+  {
+   "id": "s85",
+   "text": "THE CALLER IS THE ONE WHO SURVIVED.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "a",
+      "kind": "person",
+      "pose": "stand",
+      "x": 450,
+      "y": 440,
+      "scale": 1.3
+     },
+     {
+      "id": "b",
+      "kind": "person",
+      "pose": "stand",
+      "x": 780,
+      "y": 440,
+      "scale": 1.3,
+      "fill": "#9c9c9c",
+      "t0": 0.5
+     }
+    ],
+    "links": [
+     {
+      "style": "dotted",
+      "from": "a@head",
+      "to": "b@head",
+      "start": 0.9,
+      "dur": 0.8,
+      "gapFrom": 30,
+      "gapTo": 30
+     }
+    ]
+   }
+  },
+  {
+   "id": "s86",
+   "text": "THE ONE WHO KNEW THE RULES.",
+   "visual": {
+    "tpl": "counter",
+    "n": 7,
+    "static": true
+   }
+  },
+  {
+   "id": "s87",
+   "text": "SO WHO DO YOU THINK WROTE THEM?",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "kind": "text",
+      "x": 609,
+      "y": 300,
+      "text": "?",
+      "size": 220,
+      "color": "accent"
+     }
+    ]
+   }
+  },
+  {
+   "id": "s88",
+   "text": "RULE SEVEN. WRITE THEM DOWN.",
+   "visual": {
+    "tpl": "rule",
+    "n": 7,
+    "title": "WRITE THEM DOWN",
+    "total": 7
+   }
+  },
+  {
+   "id": "s89",
+   "text": "LEAVE THE LIST WHERE THE NEXT ONE WILL FIND IT.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "ns",
+      "kind": "nightstand",
+      "x": 609,
+      "y": 435,
+      "scale": 1
+     },
+     {
+      "kind": "svg",
+      "x": 609,
+      "y": 250,
+      "markup": "<rect x=\"-60\" y=\"-80\" width=\"120\" height=\"160\" rx=\"6\"/><g fill=\"#111\"><rect x=\"-44\" y=\"-56\" width=\"88\" height=\"5\"/><rect x=\"-44\" y=\"-38\" width=\"76\" height=\"5\"/><rect x=\"-44\" y=\"-20\" width=\"88\" height=\"5\"/><rect x=\"-44\" y=\"-2\" width=\"60\" height=\"5\"/><rect x=\"-44\" y=\"16\" width=\"82\" height=\"5\"/><rect x=\"-44\" y=\"34\" width=\"70\" height=\"5\"/></g>",
+      "rot": -3
+     }
+    ]
+   }
+  },
+  {
+   "id": "s90",
+   "text": "THEN GO BACK TO SLEEP.",
+   "visual": {
+    "tpl": "stage",
+    "set": "bedroom",
+    "setArgs": {
+     "time": "3:07",
+     "wake": 0
+    },
+    "zoom": 1.3,
+    "focus": [
+     650,
+     300
+    ],
+    "items": [
+     {
+      "id": "ns",
+      "kind": "nightstand",
+      "x": 500,
+      "y": 435,
+      "scale": 1
+     },
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 500,
+      "y": 302,
+      "scale": 0.5,
+      "lit": false
+     }
+    ]
+   }
+  },
+  {
+   "id": "s91",
+   "text": "IT IS 3:06 AM.",
+   "visual": {
+    "tpl": "stage",
+    "set": "bedroom",
+    "setArgs": {
+     "time": "3:06",
+     "wake": 0
+    },
+    "zoom": 1.3,
+    "focus": [
+     650,
+     300
+    ],
+    "items": [
+     {
+      "id": "ns",
+      "kind": "nightstand",
+      "x": 500,
+      "y": 435,
+      "scale": 1
+     },
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 500,
+      "y": 302,
+      "scale": 0.5,
+      "lit": false
+     }
+    ]
+   }
+  },
+  {
+   "id": "s92",
+   "text": "YOUR PHONE IS ON THE TABLE.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "ns",
+      "kind": "nightstand",
+      "x": 609,
+      "y": 435,
+      "scale": 1.6
+     },
+     {
+      "kind": "phone",
+      "x": 609,
+      "y": 190,
+      "scale": 1.2,
+      "lit": false
+     }
+    ]
+   }
+  },
+  {
+   "id": "s93",
+   "text": "YOU HAVE ONE MINUTE.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "kind": "clock",
+      "x": 609,
+      "y": 250,
+      "scale": 2.6,
+      "time": "3:06",
+      "run": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "s94",
+   "text": "THE NEXT CALL IS FOR YOU.",
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "ph",
+      "kind": "phone",
+      "x": 609,
+      "y": 250,
+      "scale": 1.7,
+      "lit": true,
+      "label": "YOU",
+      "sub": "INCOMING CALL",
+      "labelSize": 17,
+      "buttons": true,
+      "ring": true
+     }
+    ]
+   },
+   "fx": [
+    {
+     "t": 0.4,
+     "type": "glitch",
+     "d": 1.4,
+     "s": 1.0
+    }
+   ],
+   "transition": "glitch",
+   "sfx": [
+    {
+     "t": 0.4,
+     "name": "hit",
+     "vol": 1
+    }
+   ]
+  }
+ ]
+}

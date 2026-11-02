@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "title": "Chuyến Đi Đêm Kỳ Lạ",
+    "aspect": "16:9",
+    "resolution": "1080p",
+    "fps": 30,
+    "lang": "vi",
+    "music": "sfx/drone.wav",
+    "musicVolume": 0.25,
+    "grain": 0.3,
+    "letterbox": 0.03
+  },
+  "shots": [
+    {
+      "id": "s01",
+      "durationSec": 3.2,
+      "set": "street-dusk",
+      "camera": { "shot": "wide" },
+      "title": { "lines": ["CHUYẾN ĐI ĐÊM", "-> 11 GIỜ TỐI"], "at": 0.2 },
+      "badge": { "text": "11:00 P.M.", "at": 0.5 },
+      "characters": [
+        { "id": "char1", "preset": "hoodie", "at": "walkL", "pose": "stand", "emote": "tired" }
+      ],
+      "narration": { "text": "Đêm muộn hôm đó, khi đang đi dạo trên con phố vắng..." }
+    },
+    {
+      "id": "s02",
+      "durationSec": 2.5,
+      "set": "street-dusk",
+      "camera": { "shot": "close", "roll": 4 },
+      "characters": [
+        { "id": "char1", "preset": "hoodie", "at": "walkL", "pose": "hold", "emote": "worried" }
+      ],
+      "narration": { "text": "Đột nhiên tôi nghe thấy tiếng bước chân dồn dập ngay phía sau." }
+    },
+    {
+      "id": "s03",
+      "durationSec": 2.8,
+      "set": "street-night",
+      "camera": { "shot": "wide" },
+      "transition": "blinds",
+      "fx": ["window-blinds"],
+      "characters": [
+        { "id": "shadow", "preset": "suit", "at": "walkL", "pose": "walk", "emote": "neutral" }
+      ],
+      "narration": { "text": "Một bóng đen bí ẩn từ góc phố đang từ từ tiến lại gần." }
+    },
+    {
+      "id": "s04",
+      "durationSec": 3.2,
+      "set": "living-room",
+      "camera": { "shot": "wide" },
+      "transition": "black",
+      "counter": { "value": 9311, "above": "char1", "at": 0.5 },
+      "characters": [
+        { "id": "char1", "preset": "pink", "at": "sofaL", "pose": "sit", "emote": "surprised" }
+      ],
+      "narration": { "text": "Tôi vội vã chạy một mạch về nhà và khóa chặt cửa phòng." }
+    },
+    {
+      "id": "s05",
+      "durationSec": 3.5,
+      "set": "living-room",
+      "grade": "night-room",
+      "camera": { "shot": "close", "roll": -12 },
+      "fx": ["dust", "heavy-vignette"],
+      "characters": [
+        { "id": "char1", "preset": "pink", "at": "sofaL", "pose": "slump", "emote": "worried" }
+      ],
+      "narration": { "text": "Nhưng rồi tiếng gõ cửa lại vang lên... từ bên trong tủ quần áo." }
+    }
+  ]
+}

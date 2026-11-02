@@ -1,0 +1,13 @@
+TITLE: Demo
+LANG: en
+GRADE: dusk
+--- a1 | set=street-dusk cam=wide
+CHAR: id=ben preset=beanie at=bench1 pose=hold emote=tired prop=cup
+TEXT: 4 days without food / -> weak, light-headed ; at=0.1
+CAPTION: 4 days without food: weakness, light-headedness on standing
+NARR: After four days without food, the body is weak and light-headed.
+--- a2 | set=living-room cam=close in=blinds
+CHAR: id=amy preset=pink at=sofaR pose=lean emote=worried|surprised@1.2
+CAM: focus=amy.head to=3.3 roll=6
+COUNTER: 9311 ; from=0 above=amy
+NARR: Then the number appeared.

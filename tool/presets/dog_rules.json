@@ -1,0 +1,127 @@
+{
+  "id": "dog_rules",
+  "mode": "creepy_rules",
+  "name": "🐕 Creepy Rules // 7 Rules (Dog Standing on Two Legs)",
+  "title": "If Your Dog Ever Stands On Two Legs ACT NORMAL",
+  "fileCode": "FILE 041 // BRADIKININ",
+  "totalRules": 7,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "audioSrc": "dog_audio.mp3",
+  "scenes": [
+    {
+      "id": "s1",
+      "type": "vector_scene",
+      "vectorPreset": "dog_standing",
+      "duration": 4.0,
+      "ruleNumber": null,
+      "subtitle": "IF YOUR DOG EVER STANDS ON TWO LEGS, ACT NORMAL.",
+      "hudTime": "00:00:10"
+    },
+    {
+      "id": "s2",
+      "type": "warning_card",
+      "duration": 1.5,
+      "ruleNumber": null,
+      "warningText": "DO NOT SCREAM.",
+      "subtitle": "DO NOT SCREAM.",
+      "hudTime": "00:00:14"
+    },
+    {
+      "id": "s3",
+      "type": "warning_card",
+      "duration": 1.5,
+      "ruleNumber": null,
+      "warningText": "DO NOT RUN.",
+      "subtitle": "DO NOT RUN.",
+      "hudTime": "00:00:15"
+    },
+    {
+      "id": "s4",
+      "type": "rule_card",
+      "duration": 3.0,
+      "ruleNumber": 1,
+      "ruleTitle": "RULE 1: CONTINUE WHAT YOU WERE DOING",
+      "subtitle": "THERE ARE SEVEN RULES.",
+      "hudTime": "00:00:18"
+    },
+    {
+      "id": "s5",
+      "type": "vector_scene",
+      "vectorPreset": "dog_standing",
+      "duration": 4.0,
+      "ruleNumber": 1,
+      "subtitle": "IF YOU WERE SITTING IN YOUR CHAIR, STAY SITTING.",
+      "hudTime": "00:00:22"
+    },
+    {
+      "id": "s6",
+      "type": "exhibit",
+      "duration": 4.0,
+      "ruleNumber": 1,
+      "exhibit": {
+        "code": "EXHIBIT A",
+        "title": "COLLAR // REMOVED",
+        "note": "OBSERVED ON LIVING ROOM FLOOR",
+        "image": "exhibit-a.jpg"
+      },
+      "subtitle": "DO NOT REACH FOR THE COLLAR.",
+      "hudTime": "00:00:26"
+    },
+    {
+      "id": "s7",
+      "type": "vector_scene",
+      "vectorPreset": "dog_fridge",
+      "duration": 4.0,
+      "ruleNumber": 2,
+      "subtitle": "RULE 2: IF IT WALKS TO THE FRIDGE, DO NOT LOOK.",
+      "hudTime": "00:00:30"
+    },
+    {
+      "id": "s8",
+      "type": "cctv_live",
+      "duration": 3.5,
+      "ruleNumber": 3,
+      "cctv": {
+        "views": "2,417,903",
+        "label": "LIVING_ROOM_CAM_01"
+      },
+      "subtitle": "BUT A DOG THAT SEES A CAMERA LEARNS SOMETHING.",
+      "hudTime": "00:00:34"
+    },
+    {
+      "id": "s9",
+      "type": "exhibit",
+      "duration": 3.5,
+      "ruleNumber": 4,
+      "exhibit": {
+        "code": "EXHIBIT B",
+        "title": "ITEM: RAINCOAT, SMALL",
+        "note": "PURCHASED BY: YOU",
+        "image": "exhibit-b.jpg"
+      },
+      "subtitle": "YOU BOUGHT IT A LITTLE RAINCOAT.",
+      "hudTime": "00:00:38"
+    },
+    {
+      "id": "s10",
+      "type": "vector_scene",
+      "vectorPreset": "dog_bed",
+      "duration": 3.5,
+      "ruleNumber": 6,
+      "subtitle": "RULE 6: LOOK AT HOW IT IS LYING.",
+      "hudTime": "00:00:42"
+    },
+    {
+      "id": "s11",
+      "type": "glitch",
+      "duration": 3.0,
+      "ruleNumber": 7,
+      "glitchText": "DO NOT ASK IT WHO'S A GOOD BOY.",
+      "subtitle": "DO NOT ASK IT WHO'S A GOOD BOY.",
+      "hudTime": "00:00:46"
+    }
+  ]
+}
+

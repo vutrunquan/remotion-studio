@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "title": "QUY TẮC THANG MÁY CHUNG CƯ LÚC 03:00 SÁNG",
+    "channel": "HỒ SƠ AN NINH // TẦNG HẦM",
+    "fileNo": 89,
+    "fps": 30,
+    "aspect": "16:9",
+    "res": 1080,
+    "accent": "#facc15",
+    "ruleTotal": 6,
+    "autoGlitch": true,
+    "glitchEvery": 6,
+    "outroHold": 0.5
+  },
+  "scenes": [
+    {
+      "id": "s01",
+      "text": "NẾU THANG MÁY DỪNG Ở TẦNG 4 VÀ ĐÈN BẮT ĐẦU NHẤP NHÁY...",
+      "dur": 3.2,
+      "visual": {
+        "tpl": "stage",
+        "items": [
+          { "kind": "door", "x": 609, "y": 440, "scale": 1.4 },
+          { "kind": "clock", "x": 300, "y": 250, "scale": 1.2 }
+        ]
+      }
+    },
+    {
+      "id": "s02",
+      "text": "KHÔNG ĐƯỢC BƯỚC RA NGOÀI.",
+      "dur": 2.0,
+      "visual": {
+        "tpl": "stage",
+        "items": [
+          { "kind": "person", "pose": "scream", "x": 609, "y": 440, "scale": 1.6 },
+          { "kind": "cross", "x": 609, "y": 296, "w": 290, "h": 300, "stroke": 14, "t0": 0.2 }
+        ]
+      }
+    },
+    {
+      "id": "s03",
+      "text": "KHÔNG ĐƯỢC NHÌN VÀO GƯƠNG PHÍA SAU.",
+      "dur": 2.0,
+      "visual": {
+        "tpl": "stage",
+        "items": [
+          { "kind": "eye", "x": 609, "y": 280, "scale": 1.7 },
+          { "kind": "cross", "x": 609, "y": 280, "w": 230, "h": 230, "stroke": 14, "t0": 0.4 }
+        ]
+      }
+    },
+    {
+      "id": "s04",
+      "text": "CÓ 6 ĐIỀU BẮT BUỘC ĐỂ KHÔNG BỊ BIẾN MẤT.",
+      "dur": 2.8,
+      "visual": {
+        "tpl": "counter",
+        "n": 6,
+        "crossed": [2, 4],
+        "classified": [6]
+      }
+    },
+    {
+      "id": "s05",
+      "text": "TRƯỜNG HỢP MẤT TÍCH ĐẦU TIÊN VÀO THÁNG 11 NĂM 1974.",
+      "dur": 3.0,
+      "visual": {
+        "tpl": "exhibit",
+        "label": "EXHIBIT 04",
+        "meta": [
+          "YEAR: 1974",
+          "STATUS: NEVER FOUND"
+        ]
+      }
+    },
+    {
+      "id": "s06",
+      "text": "ĐIỀU 1: BẤM NÚT ĐÓNG CỬA 3 LẦN LIÊN TỤC.",
+      "dur": 2.6,
+      "visual": {
+        "tpl": "rule",
+        "n": 1,
+        "title": "ĐÓNG CỬA NGAY"
+      }
+    },
+    {
+      "id": "s07",
+      "text": "NẾU CÓ TIẾNG GỌI TÊN BẠN TỪ HÀNH LANG... ĐỪNG QUAY ĐẦU LẠI.",
+      "dur": 3.2,
+      "visual": {
+        "tpl": "stage",
+        "items": [
+          { "kind": "person", "pose": "run", "x": 520, "y": 440, "scale": 1.5 },
+          { "kind": "eye", "x": 750, "y": 280, "scale": 1.4 }
+        ]
+      }
+    }
+  ]
+}

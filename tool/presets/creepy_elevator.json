@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "title": "QUY TẮC THANG MÁY TẦNG B4 // KHÁCH SẠN CŨ",
+    "channel": "HỒ SƠ BẢO MẬT // TẦNG HẦM",
+    "fileNo": "089",
+    "fps": 30,
+    "aspect": "16:9",
+    "res": 1080,
+    "accent": "#facc15",
+    "ruleTotal": 6,
+    "autoGlitch": true,
+    "glitchEvery": 6,
+    "outroHold": 0.5
+  },
+  "scenes": [
+    {
+      "id": "s01",
+      "text": "THANG MÁY TÒA NHÀ NÀY CHỈ CÓ TẦNG B1 ĐẾN B3. HOÀN TOÀN KHÔNG CÓ TẦNG B4.",
+      "dur": 3.4,
+      "visual": {
+        "tpl": "stage",
+        "items": [
+          { "kind": "elevator", "x": 609, "y": 440, "scale": 1.45, "floor": "B3", "open": 0.05, "buttonDown": true },
+          { "kind": "cctv", "x": 240, "y": 140, "scale": 1.15 }
+        ]
+      }
+    },
+    {
+      "id": "s02",
+      "text": "NẾU SAU 03:00 SÁNG, NÚT B4 ĐỘT NGỘT SÁNG ĐỎ VÀ CỬA MỞ RA...",
+      "dur": 3.2,
+      "visual": {
+        "tpl": "stage",
+        "items": [
+          { "kind": "elevator", "x": 609, "y": 440, "scale": 1.45, "floor": "B4", "open": 0.35, "creature": true },
+          { "kind": "cctv", "x": 240, "y": 140, "scale": 1.15 }
+        ]
+      }
+    },
+    {
+      "id": "s03",
+      "text": "CÓ 6 ĐIỀU BẮT BUỘC ĐỂ KHÔNG BỊ BIẾN MẤT VĨNH VIỄN.",
+      "dur": 2.8,
+      "visual": {
+        "tpl": "counter",
+        "n": 6,
+        "crossed": [2, 4],
+        "classified": [6]
+      }
+    },
+    {
+      "id": "s04",
+      "text": "HỒ SƠ MẤT TÍCH SỐ 89: BẢN GHI CAMERA AN NINH LÚC 03:14 AM.",
+      "dur": 3.0,
+      "visual": {
+        "tpl": "exhibit",
+        "label": "EXHIBIT B4",
+        "meta": [
+          "LOCATION: ELEVATOR SHAFT 02",
+          "YEAR: 1989",
+          "INCIDENT: 3 PEOPLE MISSING",
+          "STATUS: NEVER RESOLVED"
+        ]
+      }
+    },
+    {
+      "id": "s05",
+      "text": "ĐIỀU 1: TUYỆT ĐỐI KHÔNG BƯỚC RA NGOÀI, DÙ CÓ NHÌN THẤY NGƯỜI QUEN VẪY TAY.",
+      "dur": 2.8,
+      "visual": {
+        "tpl": "rule",
+        "n": 1,
+        "title": "KHÔNG BƯỚC RA NGOÀI"
+      }
+    },
+    {
+      "id": "s06",
+      "text": "DÙ CÓ BÓNG NGƯỜI ĐỨNG CHỜ TRONG BÓNG TỐI... HÃY ĐỨNG YÊN.",
+      "dur": 3.0,
+      "visual": {
+        "tpl": "stage",
+        "items": [
+          { "kind": "creature", "x": 609, "y": 440, "scale": 1.4 },
+          { "kind": "eye", "x": 609, "y": 210, "scale": 1.4 },
+          { "kind": "cross", "x": 609, "y": 300, "w": 280, "h": 280, "stroke": 14, "t0": 0.3 }
+        ]
+      }
+    },
+    {
+      "id": "s07",
+      "text": "ĐIỀU 2: TUYỆT ĐỐI KHÔNG NHÌN VÀO GƯƠNG PHÍA SAU LƯNG.",
+      "dur": 2.8,
+      "visual": {
+        "tpl": "rule",
+        "n": 2,
+        "title": "CẤM NHÌN GƯƠNG"
+      }
+    },
+    {
+      "id": "s08",
+      "text": "HÌNH ẢNH TRONG GƯƠNG SẼ KHÔNG PHẢN CHIẾU ĐÚNG ĐỘNG TÁC CỦA BẠN.",
+      "dur": 3.0,
+      "visual": {
+        "tpl": "stage",
+        "items": [
+          { "kind": "mirror", "x": 609, "y": 440, "scale": 1.5, "shadow": true },
+          { "kind": "eye", "x": 380, "y": 260, "scale": 1.3 },
+          { "kind": "cross", "x": 609, "y": 300, "w": 260, "h": 260, "stroke": 14, "t0": 0.4 }
+        ]
+      }
+    },
+    {
+      "id": "s09",
+      "text": "KHI ĐIỆN THOẠI KHẨN CẤP ĐỘT NGỘT REO CHUÔNG... ĐỪNG BẮT MÁY.",
+      "dur": 3.2,
+      "visual": {
+        "tpl": "stage",
+        "items": [
+          { "kind": "phone", "x": 609, "y": 360, "scale": 1.6, "ring": true, "waves": true, "label": "KHÔNG NGHE", "buttons": true },
+          { "kind": "nightstand", "x": 609, "y": 470, "scale": 1.3 }
+        ]
+      }
+    }
+  ]
+}

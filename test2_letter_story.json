@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "title": "Bức Thư Trong Chiếc Hộp Cũ",
+    "aspect": "16:9",
+    "resolution": "1080p",
+    "fps": 30,
+    "lang": "vi",
+    "music": "sfx/drone.wav",
+    "musicVolume": 0.22,
+    "grain": 0.35,
+    "letterbox": 0.04
+  },
+  "shots": [
+    {
+      "id": "s01",
+      "durationSec": 3.2,
+      "set": "street-brick",
+      "camera": { "shot": "wide" },
+      "title": { "lines": ["BỨC THƯ CŨ", "-> NĂM 1998"], "at": 0.2 },
+      "badge": { "text": "06:30 P.M.", "at": 0.5 },
+      "characters": [
+        { "id": "char1", "preset": "beanie", "at": "bench1", "pose": "hold", "emote": "neutral", "prop": "box" }
+      ],
+      "narration": { "text": "Tôi tìm thấy chiếc hộp gỗ cũ kỹ dưới chân bậc thềm quán quen." }
+    },
+    {
+      "id": "s02",
+      "durationSec": 2.5,
+      "set": "street-brick",
+      "camera": { "shot": "close", "roll": 6 },
+      "characters": [
+        { "id": "char1", "preset": "beanie", "at": "bench1", "pose": "hold", "emote": "surprised", "prop": "box" }
+      ],
+      "narration": { "text": "Bên trong là một lá thư chưa từng được mở ra suốt hai mươi năm." }
+    },
+    {
+      "id": "s03",
+      "durationSec": 3.0,
+      "set": "living-room",
+      "camera": { "shot": "wide" },
+      "transition": "dissolve",
+      "characters": [
+        { "id": "amy", "preset": "pink", "at": "sofaL", "pose": "sit", "emote": "happy" }
+      ],
+      "narration": { "text": "Nét chữ nắn nót của một người bạn thời thơ ấu từng chuyển đi rất xa." }
+    },
+    {
+      "id": "s04",
+      "durationSec": 3.4,
+      "set": "living-room",
+      "camera": { "shot": "close", "roll": -8 },
+      "counter": { "value": 1998, "above": "amy", "at": 0.6 },
+      "fx": ["sparkles", "dust"],
+      "characters": [
+        { "id": "amy", "preset": "pink", "at": "sofaL", "pose": "lean", "emote": "smirk", "glow": 0.4 }
+      ],
+      "narration": { "text": "Dòng chữ viết: 'Dù ở bất kỳ đâu, tôi vẫn sẽ nhớ ngày chúng ta gặp nhau.'" }
+    },
+    {
+      "id": "s05",
+      "durationSec": 3.5,
+      "set": "street-night",
+      "camera": { "shot": "wide" },
+      "transition": "blinds",
+      "fx": ["window-blinds"],
+      "characters": [
+        { "id": "walker", "preset": "teal", "at": "walkL", "pose": "walk", "emote": "tired" }
+      ],
+      "narration": { "text": "Và khi tôi ngước nhìn ra ngoài ban công... một bóng hình quen thuộc đang đứng đợi." }
+    }
+  ]
+}

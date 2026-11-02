@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "title": "5 QUY TẮC KHI CHÓ ĐỨNG 2 CHÂN",
+    "channel": "HỒ SƠ BÍ ẨN // CƠ MẬT",
+    "fileNo": 41,
+    "fps": 30,
+    "aspect": "16:9",
+    "res": 1080,
+    "accent": "#e51939",
+    "ruleTotal": 5,
+    "autoGlitch": true,
+    "glitchEvery": 6,
+    "outroHold": 0.5
+  },
+  "scenes": [
+    {
+      "id": "s01",
+      "text": "NẾU NỬA ĐÊM BẠN THẤY CHÓ CỦA MÌNH ĐỨNG DẬY BẰNG HAI CHÂN...",
+      "dur": 3.2,
+      "visual": {
+        "tpl": "stage",
+        "set": "room",
+        "setArgs": {},
+        "items": [
+          {
+            "id": "dog",
+            "kind": "dog",
+            "x": 650,
+            "y": 438,
+            "pose": "stand",
+            "from": "quad",
+            "at": 0.5,
+            "dur": 1.2
+          }
+        ]
+      }
+    },
+    {
+      "id": "s02",
+      "text": "KHÔNG ĐƯỢC LA HÉT.",
+      "dur": 2.0,
+      "visual": {
+        "tpl": "stage",
+        "items": [
+          { "kind": "person", "pose": "scream", "x": 609, "y": 440, "scale": 1.6 },
+          { "kind": "cross", "x": 609, "y": 296, "w": 290, "h": 300, "stroke": 14, "t0": 0.2 }
+        ]
+      }
+    },
+    {
+      "id": "s03",
+      "text": "KHÔNG ĐƯỢC BỎ CHẠY.",
+      "dur": 2.0,
+      "visual": {
+        "tpl": "stage",
+        "items": [
+          { "kind": "door", "x": 800, "y": 440, "scale": 1.3 },
+          { "kind": "person", "pose": "run", "x": 520, "y": 440, "scale": 1.5 },
+          { "kind": "speed", "x": 400, "y": 330, "scale": 1.2 }
+        ]
+      }
+    },
+    {
+      "id": "s04",
+      "text": "CÓ 5 QUY TẮC BẮT BUỘC ĐỂ BẠN CÒN SỐNG SÓT.",
+      "dur": 2.8,
+      "visual": {
+        "tpl": "counter",
+        "n": 5,
+        "crossed": [3],
+        "classified": [5]
+      }
+    },
+    {
+      "id": "s05",
+      "text": "BẰNG CHỨNG ĐÃ ĐƯỢC GHI NHẬN TỪ NHỮNG NĂM 1897.",
+      "dur": 3.0,
+      "visual": {
+        "tpl": "exhibit",
+        "label": "EXHIBIT A",
+        "meta": [
+          "YEAR: 1897",
+          "STATUS: WATCHING"
+        ]
+      }
+    },
+    {
+      "id": "s06",
+      "text": "ĐIỀU 1: HÃY HÀNH XỬ NHƯ CHƯA CÓ CHUYỆN GÌ XẢY RA.",
+      "dur": 2.6,
+      "visual": {
+        "tpl": "rule",
+        "n": 1,
+        "title": "HÀNH XỬ BÌNH THƯỜNG"
+      }
+    },
+    {
+      "id": "s07",
+      "text": "VÀ TUYỆT ĐỐI KHÔNG ĐƯỢC ĐỂ NÓ BIẾT RẰNG BẠN ĐANG NHÌN.",
+      "dur": 3.0,
+      "visual": {
+        "tpl": "stage",
+        "items": [
+          { "kind": "eye", "x": 609, "y": 280, "scale": 1.7 },
+          { "kind": "cross", "x": 609, "y": 280, "w": 230, "h": 230, "stroke": 14, "t0": 0.8 }
+        ]
+      }
+    }
+  ]
+}

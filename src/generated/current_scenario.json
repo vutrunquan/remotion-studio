@@ -1,0 +1,48 @@
+{
+  "id": "story_midnight_call",
+  "mode": "story_studio",
+  "name": "🎭 2D Story // The 3:07 A.M. Call (Phòng ngủ đêm & Cuộc gọi bí ẩn)",
+  "title": "The 3:07 A.M. Phone Call",
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "audioSrc": "dog_audio.mp3",
+  "scenes": [
+    {
+      "id": "st1",
+      "duration": 4.0,
+      "set": "bedroom_night",
+      "camera": { "shot": "wide" },
+      "character": { "preset": "boy", "pose": "sit", "emote": "sleepy", "x": 48 },
+      "badgeTime": "03:07 A.M.",
+      "subtitle": "EVERY NIGHT AT EXACTLY 3:07 A.M., THE OLD LANDLINE RINGS."
+    },
+    {
+      "id": "st2",
+      "duration": 3.5,
+      "set": "bedroom_night",
+      "camera": { "shot": "close" },
+      "character": { "preset": "boy", "pose": "hold_phone", "emote": "worried", "x": 50 },
+      "titleCard": { "text": "UNKNOWN CALLER", "arrow": "right" },
+      "subtitle": "I NEVER PICKED IT UP. UNTIL TONIGHT."
+    },
+    {
+      "id": "st3",
+      "duration": 4.0,
+      "set": "corridor_spooky",
+      "camera": { "shot": "wide" },
+      "character": { "preset": "boy", "pose": "panic", "emote": "shocked", "x": 50 },
+      "counterBadge": "PULSE: 145 BPM",
+      "subtitle": "A VOICE ON THE OTHER END WHISPERED: 'DO NOT LOOK BEHIND YOU.'"
+    },
+    {
+      "id": "st4",
+      "duration": 3.5,
+      "set": "corridor_spooky",
+      "camera": { "shot": "close", "roll": -8 },
+      "character": { "preset": "detective", "pose": "talk", "emote": "dread", "x": 52 },
+      "titleCard": { "text": "THE HALLWAY ➔", "arrow": "right" },
+      "subtitle": "I TURNED AROUND. THE CORRIDOR WAS ENDLESS."
+    }
+  ]
+}

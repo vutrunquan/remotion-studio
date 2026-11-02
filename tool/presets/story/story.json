@@ -1,0 +1,55 @@
+{
+  "meta": {"title": "Reference recreation (35s)", "aspect": "16:9", "resolution": "1080p", "fps": 30, "lang": "en", "grain": 0.35},
+  "shots": [
+    {"id": "s01", "durationSec": 2.1, "set": "street-dusk", "camera": {"shot": "wide"},
+     "characters": [{"id": "ben", "preset": "beanie", "at": "bench1", "pose": "hold", "emote": "tired", "prop": "cup"}],
+     "title": {"lines": ["4 days without food", "-> weak, light-headed"], "at": 0.1},
+     "caption": "4 days without food: weakness, light-headedness on standing",
+     "narration": {"text": "After four days without food, the body is weak and light-headed."}},
+    {"id": "s02", "durationSec": 1.1, "set": "street-dusk", "camera": {"shot": "xclose", "focus": "ben.hand"},
+     "characters": [{"id": "ben", "preset": "beanie", "at": "bench1", "pose": "hold", "emote": "tired", "prop": "cup"}]},
+    {"id": "s03", "durationSec": 1.1, "set": "street-dusk", "camera": {"shot": "close", "focus": "ben.head"},
+     "characters": [{"id": "ben", "preset": "beanie", "at": "bench1", "pose": "hold", "emote": [{"at": 0, "v": "tired"}, {"at": 0.6, "v": "sleepy"}], "prop": "cup"}]},
+    {"id": "s04", "durationSec": 1.1, "set": "street-dusk", "camera": {"shot": "medium"},
+     "characters": [{"id": "ben", "preset": "beanie", "at": "bench1", "pose": "hold", "emote": "tired", "prop": "cup"}]},
+    {"id": "s05", "durationSec": 2.1, "set": "street-brick", "camera": {"shot": "wide"},
+     "characters": [
+       {"id": "ben", "preset": "beanie", "at": "bench1", "pose": "sit", "view": "back", "emote": "neutral"},
+       {"id": "pal", "preset": "suit", "at": "walkL", "pose": "back", "view": "back", "moveTo": {"x": 700}}]},
+    {"id": "s06", "durationSec": 2.6, "set": "living-room", "camera": {"shot": "wide"}, "transition": "dissolve",
+     "characters": [
+       {"id": "jo", "preset": "hoodie", "at": "sofaL", "pose": "hold", "emote": "content", "prop": "box"},
+       {"id": "amy", "preset": "pink", "at": "sofaR", "pose": "sit", "emote": "happy"}]},
+    {"id": "s07", "durationSec": 1.7, "set": "living-room", "camera": {"shot": "medium"},
+     "characters": [
+       {"id": "jo", "preset": "hoodie", "at": "sofaL", "pose": "hold", "emote": "happy", "prop": "box"},
+       {"id": "amy", "preset": "pink", "at": "sofaR", "pose": "lean", "emote": "content"}]},
+    {"id": "s08", "durationSec": 3.6, "set": "living-room", "camera": {"shot": "close"},
+     "characters": [
+       {"id": "jo", "preset": "hoodie", "at": "sofaL", "pose": "sit", "emote": [{"at": 0, "v": "happy"}, {"at": 1.8, "v": "smirk"}]},
+       {"id": "amy", "preset": "pink", "at": "sofaR", "pose": "lean", "emote": [{"at": 0, "v": "smirk"}, {"at": 1.5, "v": "closed"}]}]},
+    {"id": "s09", "durationSec": 1.7, "set": "living-room", "camera": {"shot": "close", "roll": -4}, "fx": ["sparkles", "dust"],
+     "characters": [
+       {"id": "jo", "preset": "hoodie", "at": "sofaL", "pose": "sit", "emote": "smirk", "glow": 0.4},
+       {"id": "amy", "preset": "pink", "at": "sofaR", "pose": "lean", "emote": "closed", "glow": 0.4}]},
+    {"id": "s10", "durationSec": 2.1, "set": "street-night", "camera": {"shot": "wide"}, "transition": "blinds", "fx": ["window-blinds"],
+     "characters": [{"id": "walker", "preset": "teal", "at": "walkL", "pose": "walk", "emote": "tired", "moveTo": {"x": 700}}]},
+    {"id": "s11", "durationSec": 1.8, "set": "living-room", "camera": {"shot": "wide"}, "transition": "blinds", "setOptions": {"takeout": true}, "characters": []},
+    {"id": "s12", "durationSec": 3.8, "set": "living-room", "grade": "night-room", "setOptions": {"clock": "11:00"}, "camera": {"shot": "wide"},
+     "badge": {"text": "11 P.M.", "at": 0.5},
+     "characters": [{"id": "jo", "preset": "hoodie", "at": "sofaC", "pose": [{"at": 0, "v": "sit"}, {"at": 2, "v": "slump"}], "emote": [{"at": 0, "v": "tired"}, {"at": 2, "v": "sleepy"}], "fadeIn": 0.5}]},
+    {"id": "s13", "durationSec": 1.4, "set": "living-room", "grade": "night-room", "camera": {"shot": "close", "roll": 10, "rollTo": 14, "focus": "jo.head"},
+     "characters": [{"id": "jo", "preset": "hoodie", "at": "sofaC", "pose": "slump", "emote": "sleepy"}]},
+    {"id": "s14", "durationSec": 1.6, "set": "living-room", "grade": "night-room", "transition": "black", "camera": {"shot": "close", "roll": -16, "focus": "jo.head"},
+     "characters": [{"id": "jo", "preset": "hoodie", "at": "sofaC", "pose": "slump", "emote": "closed", "rotate": 35}]},
+    {"id": "s15", "durationSec": 5.9, "set": "living-room", "grade": "dim", "camera": {"shot": "close", "roll": 8, "rollTo": 4, "focus": "amy.head"},
+     "counter": {"value": 9311, "from": 0, "above": "amy", "at": 0.9, "countSec": 1.6}, "fx": ["heavy-vignette"],
+     "characters": [{"id": "amy", "preset": "pink", "at": "floorC", "pose": "stand", "glow": 0.9,
+       "emote": [{"at": 0, "v": "worried"}, {"at": 1.4, "v": "surprised"}, {"at": 2.6, "v": "smirk"}, {"at": 4.2, "v": "worried"}]}]},
+    {"id": "s16", "durationSec": 1.3, "set": "living-room", "grade": "dim", "camera": {"shot": "wide"}, "fx": ["dust"],
+     "counter": {"value": 9311, "above": "amy"},
+     "characters": [
+       {"id": "amy", "preset": "pink", "x": 700, "y": 940, "pose": "kneel", "emote": "smirk"},
+       {"id": "jo", "preset": "hoodie", "at": "sofaC", "pose": "scratch", "emote": "tired"}]}
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "story_haunted_street",
+  "mode": "story_studio",
+  "name": "🎭 2D Story // The Empty Street (Con đường vắng & Bóng đen theo sau)",
+  "title": "The Empty Street At Midnight",
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "audioSrc": "dog_audio.mp3",
+  "scenes": [
+    {
+      "id": "hs1",
+      "duration": 3.5,
+      "set": "street_night",
+      "camera": { "shot": "wide" },
+      "character": { "preset": "girl", "pose": "walk", "emote": "neutral", "x": 42 },
+      "badgeTime": "11:42 P.M.",
+      "subtitle": "THE LAST BUS HAD ALREADY LEFT."
+    },
+    {
+      "id": "hs2",
+      "duration": 3.5,
+      "set": "street_night",
+      "camera": { "shot": "medium" },
+      "character": { "preset": "girl", "pose": "stand", "emote": "worried", "x": 50 },
+      "titleCard": { "text": "FOOTSTEPS BEHIND ➔", "arrow": "right" },
+      "subtitle": "THEN I HEARD HEAVY FOOTSTEPS MATCHING MY EXACT PACE."
+    },
+    {
+      "id": "hs3",
+      "duration": 4.0,
+      "set": "street_night",
+      "camera": { "shot": "close", "roll": 10 },
+      "character": { "preset": "girl", "pose": "panic", "emote": "dread", "x": 50 },
+      "counterBadge": "DISTANCE: 5 METERS",
+      "subtitle": "I STOPPED. THE FOOTSTEPS DID NOT."
+    }
+  ]
+}
+

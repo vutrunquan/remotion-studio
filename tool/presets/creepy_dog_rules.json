@@ -1,0 +1,788 @@
+{
+ "meta": {
+  "title": "Mẫu: DOG RULES",
+  "channel": "BRADIKININ",
+  "fileNo": 41,
+  "fps": 30,
+  "aspect": "16:9",
+  "res": 1080,
+  "accent": "#e51939",
+  "ruleTotal": 7,
+  "autoGlitch": true,
+  "glitchEvery": 9,
+  "outroHold": 0.5
+ },
+ "scenes": [
+  {
+   "id": "s01",
+   "text": "IF YOUR DOG EVER STANDS UP ON TWO LEGS...",
+   "dur": 3.6,
+   "visual": {
+    "tpl": "stage",
+    "set": "room",
+    "setArgs": {},
+    "items": [
+     {
+      "id": "dog",
+      "kind": "dog",
+      "x": 650,
+      "y": 438,
+      "pose": "stand",
+      "from": "quad",
+      "at": 0.9,
+      "dur": 1.5
+     }
+    ]
+   }
+  },
+  {
+   "id": "s02",
+   "text": "AND STAYS THERE...",
+   "dur": 1.0,
+   "visual": {
+    "tpl": "stage",
+    "set": "room",
+    "setArgs": {},
+    "items": [
+     {
+      "id": "dog",
+      "kind": "dog",
+      "x": 650,
+      "y": 438,
+      "pose": "stand"
+     }
+    ]
+   }
+  },
+  {
+   "id": "s03",
+   "text": "DO NOT SCREAM.",
+   "dur": 1.0,
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "p",
+      "kind": "person",
+      "pose": "scream",
+      "x": 609,
+      "y": 440,
+      "scale": 1.62
+     },
+     {
+      "kind": "cross",
+      "x": 609,
+      "y": 296,
+      "w": 290,
+      "h": 300,
+      "stroke": 14,
+      "t0": 0.25
+     }
+    ]
+   }
+  },
+  {
+   "id": "s04",
+   "text": "DO NOT RUN.",
+   "dur": 1.0,
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "kind": "door",
+      "x": 800,
+      "y": 440,
+      "scale": 1.3
+     },
+     {
+      "id": "p",
+      "kind": "person",
+      "pose": "run",
+      "x": 520,
+      "y": 440,
+      "scale": 1.5
+     },
+     {
+      "kind": "speed",
+      "x": 400,
+      "y": 330,
+      "scale": 1.2
+     }
+    ]
+   }
+  },
+  {
+   "id": "s05",
+   "text": "AND DO NOT LET IT SEE THAT YOU NOTICED.",
+   "dur": 3.0,
+   "visual": {
+    "tpl": "stage",
+    "set": "room",
+    "setArgs": {
+     "sitter": "tense",
+     "sweat": true
+    },
+    "items": [
+     {
+      "id": "dog",
+      "kind": "dog",
+      "x": 650,
+      "y": 438,
+      "pose": "stand",
+      "flip": true,
+      "walk": false
+     }
+    ],
+    "links": [
+     {
+      "style": "gaze",
+      "from": "chair",
+      "to": "dog@head",
+      "start": 0.9,
+      "dur": 0.6,
+      "gapFrom": 14
+     }
+    ]
+   },
+   "transition": "glitch",
+   "fx": [
+    {
+     "t": 0.05,
+     "type": "glitch",
+     "d": 0.5,
+     "s": 1.0
+    }
+   ]
+  },
+  {
+   "id": "s06",
+   "text": "THERE ARE SEVEN RULES.",
+   "dur": 2.4,
+   "visual": {
+    "tpl": "counter",
+    "n": 7
+   }
+  },
+  {
+   "id": "s07",
+   "text": "MOST PEOPLE BREAK THE THIRD.",
+   "dur": 2.0,
+   "visual": {
+    "tpl": "counter",
+    "n": 7,
+    "static": true,
+    "crossed": [
+     3
+    ],
+    "crossAt": 0.45
+   }
+  },
+  {
+   "id": "s08",
+   "text": "NOBODY WAS EVER SUPPOSED TO NEED THE SEVENTH.",
+   "dur": 3.2,
+   "visual": {
+    "tpl": "counter",
+    "n": 7,
+    "static": true,
+    "crossed": [
+     3
+    ],
+    "crossAt": 0,
+    "classified": [
+     7
+    ],
+    "classifiedAt": 0.9
+   },
+   "fx": [
+    {
+     "t": 0.8,
+     "type": "glitch",
+     "d": 0.6,
+     "s": 0.9
+    }
+   ]
+  },
+  {
+   "id": "s09",
+   "text": "FOR THIRTY THOUSAND YEARS, DOGS HAVE LIVED BESIDE US.",
+   "dur": 4.0,
+   "visual": {
+    "tpl": "exhibit",
+    "label": "EXHIBIT A",
+    "meta": [
+     "YEAR: 1897",
+     "DOG: ALREADY ON A CHAIR"
+    ],
+    "layout": "portrait"
+   },
+   "fx": [
+    {
+     "t": 2.2,
+     "type": "glitch",
+     "d": 0.3,
+     "s": 0.7
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "text": "THAT IS A LONG TIME TO WATCH SOMEONE.",
+   "dur": 3.0,
+   "visual": {
+    "tpl": "exhibit",
+    "label": "EXHIBIT B",
+    "meta": [
+     "YEAR: 1910",
+     "STATUS: WATCHING"
+    ],
+    "layout": "landscape"
+   }
+  },
+  {
+   "id": "s11",
+   "text": "YOUR DOG KNOWS WHEN YOU WAKE UP.",
+   "dur": 1.9,
+   "visual": {
+    "tpl": "stage",
+    "set": "bedroom",
+    "setArgs": {
+     "wake": [
+      [
+       0.5,
+       0
+      ],
+      [
+       1.2,
+       1
+      ]
+     ],
+     "time": "6:00"
+    },
+    "items": [
+     {
+      "id": "dog",
+      "kind": "dog",
+      "pose": "quad",
+      "x": 330,
+      "y": 438
+     }
+    ],
+    "links": [
+     {
+      "style": "dotted",
+      "from": "dog@snout",
+      "to": "bed@head",
+      "start": 0.2,
+      "dur": 0.7
+     }
+    ]
+   }
+  },
+  {
+   "id": "s12",
+   "text": "IT KNOWS WHERE THE FOOD IS KEPT.",
+   "dur": 1.1,
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "dog",
+      "kind": "dog",
+      "pose": "quad",
+      "x": 280,
+      "y": 438
+     },
+     {
+      "id": "bowl",
+      "kind": "bowl",
+      "x": 620,
+      "y": 438
+     },
+     {
+      "id": "fridge",
+      "kind": "fridge",
+      "x": 930,
+      "y": 438
+     }
+    ],
+    "links": [
+     {
+      "style": "dotted",
+      "from": "dog@snout",
+      "to": "fridge@left",
+      "start": 0.05,
+      "dur": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "id": "s13",
+   "text": "IT KNOWS WHICH POCKET HAS THE KEYS.",
+   "dur": 2.9,
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "dog",
+      "kind": "dog",
+      "pose": "quad",
+      "x": 250,
+      "y": 438
+     },
+     {
+      "id": "man",
+      "kind": "person",
+      "pose": "stand",
+      "x": 880,
+      "y": 440,
+      "scale": 1.3
+     },
+     {
+      "id": "keys",
+      "kind": "key",
+      "x": 922,
+      "y": 359,
+      "scale": 1.4
+     }
+    ],
+    "links": [
+     {
+      "style": "dotted",
+      "from": "dog@snout",
+      "to": "man@pocket",
+      "start": 0.2,
+      "dur": 0.8,
+      "gapTo": 30
+     }
+    ]
+   }
+  },
+  {
+   "id": "s14",
+   "text": "MOST DOGS DO NOTHING WITH THIS INFORMATION.",
+   "dur": 3.8,
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "d0",
+      "kind": "dog",
+      "pose": "quad",
+      "shade": true,
+      "x": 150,
+      "y": 420,
+      "scale": 0.62
+     },
+     {
+      "id": "d1",
+      "kind": "dog",
+      "pose": "quad",
+      "shade": true,
+      "x": 380,
+      "y": 420,
+      "scale": 0.62
+     },
+     {
+      "id": "d2",
+      "kind": "dog",
+      "pose": "quad",
+      "shade": true,
+      "x": 610,
+      "y": 420,
+      "scale": 0.62
+     },
+     {
+      "id": "d3",
+      "kind": "dog",
+      "pose": "quad",
+      "shade": true,
+      "x": 840,
+      "y": 420,
+      "scale": 0.62
+     },
+     {
+      "id": "d4",
+      "kind": "dog",
+      "pose": "quad",
+      "shade": true,
+      "x": 1070,
+      "y": 420,
+      "scale": 0.62
+     }
+    ]
+   }
+  },
+  {
+   "id": "s15",
+   "text": "MOST.",
+   "dur": 1.5,
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "d0",
+      "kind": "dog",
+      "pose": "quad",
+      "shade": true,
+      "x": 150,
+      "y": 420,
+      "scale": 0.62,
+      "opacity": [
+       [
+        0.2,
+        1
+       ],
+       [
+        1.2,
+        0.35
+       ]
+      ],
+      "blur": [
+       [
+        0.2,
+        0
+       ],
+       [
+        1.2,
+        3
+       ]
+      ]
+     },
+     {
+      "id": "d1",
+      "kind": "dog",
+      "pose": "quad",
+      "shade": true,
+      "x": 380,
+      "y": 420,
+      "scale": 0.62,
+      "opacity": [
+       [
+        0.2,
+        1
+       ],
+       [
+        1.2,
+        0.35
+       ]
+      ],
+      "blur": [
+       [
+        0.2,
+        0
+       ],
+       [
+        1.2,
+        3
+       ]
+      ]
+     },
+     {
+      "id": "d2",
+      "kind": "dog",
+      "pose": "stand",
+      "shade": false,
+      "x": 610,
+      "y": 420,
+      "scale": 0.62,
+      "from": "quad",
+      "at": 0.2,
+      "dur": 1.0
+     },
+     {
+      "id": "d3",
+      "kind": "dog",
+      "pose": "quad",
+      "shade": true,
+      "x": 840,
+      "y": 420,
+      "scale": 0.62,
+      "opacity": [
+       [
+        0.2,
+        1
+       ],
+       [
+        1.2,
+        0.35
+       ]
+      ],
+      "blur": [
+       [
+        0.2,
+        0
+       ],
+       [
+        1.2,
+        3
+       ]
+      ]
+     },
+     {
+      "id": "d4",
+      "kind": "dog",
+      "pose": "quad",
+      "shade": true,
+      "x": 1070,
+      "y": 420,
+      "scale": 0.62,
+      "opacity": [
+       [
+        0.2,
+        1
+       ],
+       [
+        1.2,
+        0.35
+       ]
+      ],
+      "blur": [
+       [
+        0.2,
+        0
+       ],
+       [
+        1.2,
+        3
+       ]
+      ]
+     }
+    ]
+   },
+   "fx": [
+    {
+     "t": 0.2,
+     "type": "glitch",
+     "d": 0.3,
+     "s": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s16",
+   "text": "RULE ONE. ACT NORMAL.",
+   "dur": 2.4,
+   "visual": {
+    "tpl": "rule",
+    "n": 1,
+    "total": 7,
+    "title": "ACT NORMAL"
+   }
+  },
+  {
+   "id": "s17",
+   "text": "WHATEVER YOU WERE DOING, KEEP DOING IT.",
+   "dur": 3.0,
+   "visual": {
+    "tpl": "stage",
+    "set": "room",
+    "setArgs": {},
+    "items": [
+     {
+      "id": "dog",
+      "kind": "dog",
+      "x": [
+       [
+        0,
+        520
+       ],
+       [
+        3,
+        600
+       ]
+      ],
+      "y": 438,
+      "pose": "stand",
+      "walk": true
+     },
+     {
+      "kind": "check",
+      "x": 246,
+      "y": 140,
+      "t0": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "id": "s18",
+   "text": "IF YOU WERE EATING, KEEP EATING.",
+   "dur": 2.5,
+   "visual": {
+    "tpl": "stage",
+    "set": "diningRoom",
+    "items": [
+     {
+      "id": "dog",
+      "kind": "dog",
+      "x": 800,
+      "y": 438,
+      "pose": "stand",
+      "walk": true,
+      "flip": true
+     },
+     {
+      "kind": "check",
+      "x": 246,
+      "y": 160,
+      "t0": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "id": "s19",
+   "text": "IF YOU WERE WATCHING TELEVISION, KEEP WATCHING.",
+   "dur": 2.5,
+   "visual": {
+    "tpl": "stage",
+    "set": "room",
+    "setArgs": {},
+    "items": [
+     {
+      "id": "dog",
+      "kind": "dog",
+      "x": [
+       [
+        0,
+        760
+       ],
+       [
+        2.5,
+        700
+       ]
+      ],
+      "y": 438,
+      "pose": "stand",
+      "walk": true,
+      "flip": true
+     },
+     {
+      "kind": "check",
+      "x": 246,
+      "y": 140,
+      "t0": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "id": "s20",
+   "text": "IF YOU WERE DOING NOTHING AT ALL... CONTINUE.",
+   "dur": 3.0,
+   "visual": {
+    "tpl": "stage",
+    "set": "room",
+    "setArgs": {
+     "sitter": "lounge"
+    },
+    "items": [
+     {
+      "id": "dog",
+      "kind": "dog",
+      "x": [
+       [
+        0,
+        560
+       ],
+       [
+        3,
+        600
+       ]
+      ],
+      "y": 438,
+      "pose": "stand",
+      "walk": true,
+      "flip": true
+     }
+    ]
+   }
+  },
+  {
+   "id": "s21",
+   "text": "YOU HAVE TRAINED FOR THIS.",
+   "dur": 2.0,
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "kind": "agent",
+      "x": 609,
+      "y": 215,
+      "scale": 1.35
+     }
+    ]
+   },
+   "fx": [
+    {
+     "t": 0.0,
+     "type": "glitch",
+     "d": 0.25,
+     "s": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s22",
+   "text": "DO NOT STARE.",
+   "dur": 2.0,
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "kind": "eye",
+      "x": 609,
+      "y": 280,
+      "scale": 1.7
+     },
+     {
+      "kind": "cross",
+      "x": 609,
+      "y": 280,
+      "w": 230,
+      "h": 230,
+      "stroke": 14,
+      "t0": 1.0
+     }
+    ]
+   },
+   "fx": [
+    {
+     "t": 0.0,
+     "type": "glitch",
+     "d": 0.7,
+     "s": 0.9
+    }
+   ]
+  },
+  {
+   "id": "s23",
+   "text": "IT IS NOT LOOKING AT YOU.",
+   "dur": 1.4,
+   "visual": {
+    "tpl": "stage",
+    "items": [
+     {
+      "id": "dog",
+      "kind": "dog",
+      "x": 609,
+      "y": 430,
+      "pose": "stand",
+      "walk": true,
+      "scale": 1.3
+     }
+    ]
+   },
+   "fx": [
+    {
+     "t": 0.5,
+     "type": "glitch",
+     "d": 0.9,
+     "s": 1.0
+    }
+   ]
+  }
+ ]
+}

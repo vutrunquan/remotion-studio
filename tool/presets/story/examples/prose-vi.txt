@@ -1,0 +1,6 @@
+LANG: vi
+TITLE: Demo tiếng Việt
+
+Anh ngồi trên ghế đá ngoài công viên, mệt và đói. Anh đã không ăn gì suốt nhiều ngày.
+
+Đêm đó ở nhà, cô ấy lo lắng chờ trên ghế sofa. Bỗng nhiên điện thoại sáng lên.

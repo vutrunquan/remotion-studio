@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "title": "Cuộc Hẹn Dưới Mưa Ở Quán Cũ",
+    "aspect": "16:9",
+    "resolution": "1080p",
+    "fps": 30,
+    "lang": "vi",
+    "music": "sfx/drone.wav",
+    "musicVolume": 0.22,
+    "grain": 0.35,
+    "letterbox": 0.04
+  },
+  "shots": [
+    {
+      "id": "s01",
+      "durationSec": 3.4,
+      "set": "street-night",
+      "camera": { "shot": "wide" },
+      "title": { "lines": ["CUỘC HẸN DƯỚI MƯA", "-> PHỐ CŨ NĂM 2004"], "at": 0.2 },
+      "badge": { "text": "09:00 P.M.", "at": 0.5 },
+      "fx": ["dust"],
+      "characters": [
+        { "id": "char1", "preset": "suit", "at": "walkL", "pose": "walk", "emote": "neutral", "prop": "umbrella" }
+      ],
+      "narration": { "text": "Cơn mưa rào bất chợt trút xuống con phố vắng lúc chín giờ tối." }
+    },
+    {
+      "id": "s02",
+      "durationSec": 3.0,
+      "set": "living-room",
+      "camera": { "shot": "medium" },
+      "transition": "dissolve",
+      "characters": [
+        { "id": "char1", "preset": "suit", "at": "sofaL", "pose": "sit", "emote": "tired", "prop": "cup" }
+      ],
+      "narration": { "text": "Tôi bước vào quán cà phê quen thuộc, nơi góc bàn xưa vẫn còn đó." }
+    },
+    {
+      "id": "s03",
+      "durationSec": 3.2,
+      "set": "living-room",
+      "camera": { "shot": "wide" },
+      "counter": { "value": 2004, "from": 1994, "countSec": 1.2, "at": 0.4 },
+      "characters": [
+        { "id": "char1", "preset": "suit", "at": "sofaL", "pose": "sit", "emote": "neutral", "prop": "cup" },
+        { "id": "char2", "preset": "pink", "at": "sofaR", "pose": "sit", "emote": "happy", "prop": "cup" }
+      ],
+      "narration": { "text": "Đã đúng mười năm kể từ ngày chúng tôi tốt nghiệp và mất liên lạc." }
+    },
+    {
+      "id": "s04",
+      "durationSec": 3.0,
+      "set": "living-room",
+      "camera": { "shot": "close", "roll": 5 },
+      "fx": ["sparkles", "dust"],
+      "characters": [
+        { "id": "char2", "preset": "pink", "at": "sofaR", "pose": "hold", "emote": "smirk", "prop": "letter", "glow": 0.35 }
+      ],
+      "narration": { "text": "Cô ấy nhẹ nhàng đặt lên bàn một phong bì thư màu nâu đã ngả vàng." }
+    },
+    {
+      "id": "s05",
+      "durationSec": 3.2,
+      "set": "living-room",
+      "camera": { "shot": "xclose", "roll": -6 },
+      "characters": [
+        { "id": "char1", "preset": "suit", "at": "sofaL", "pose": "lean", "emote": "surprised" }
+      ],
+      "narration": { "text": "'Gửi người bạn thân... dù thời gian trôi đi, lời hứa năm ấy vẫn còn nguyên.'" }
+    },
+    {
+      "id": "s06",
+      "durationSec": 3.4,
+      "set": "living-room",
+      "camera": { "shot": "wide" },
+      "transition": "blinds",
+      "characters": [
+        { "id": "char1", "preset": "suit", "at": "sofaL", "pose": "sit", "emote": "happy" },
+        { "id": "char2", "preset": "pink", "at": "sofaR", "pose": "sit", "emote": "happy" }
+      ],
+      "narration": { "text": "Và giữa đêm mưa lạnh giá, ký ức tuổi trẻ dường như chưa từng phai nhạt." }
+    }
+  ]
+}
+

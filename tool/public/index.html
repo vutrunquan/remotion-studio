@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unified Remotion Studio // Creepy Rules & 2D Story</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Additional styles for Subtabs & Still Overlay */
+    .subtabs-bar {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 14px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 8px;
+    }
+    .subtab-btn {
+      background: #141721;
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .subtab-btn:hover {
+      background: #1e2333;
+      color: #fff;
+    }
+    .subtab-btn.active {
+      background: #2563eb;
+      color: #fff;
+      border-color: #3b82f6;
+    }
+    .subtab-btn.active.creepy {
+      background: #dc2626;
+      border-color: #ef4444;
+    }
+    .subtab-btn.active.story {
+      background: #0891b2;
+      border-color: #06b6d4;
+    }
+    .raw-script-box, .raw-json-box {
+      width: 100%;
+      height: 480px;
+      background: #090a0f;
+      color: #38bdf8;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 13px;
+      line-height: 1.5;
+      padding: 12px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      resize: vertical;
+      white-space: pre;
+    }
+    .still-img-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      pointer-events: none;
+      display: none;
+    }
+    .still-active-tag {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.75);
+      border: 1px solid #22c55e;
+      color: #22c55e;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 4px;
+      display: none;
+      z-index: 10;
+    }
+    .badge-creepy {
+      background: #450a0a;
+      color: #f87171;
+      border: 1px solid #b91c1c;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 11px;
+    }
+    .badge-story {
+      background: #082f49;
+      color: #38bdf8;
+      border: 1px solid #0284c7;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 11px;
+    }
+    .item-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: #1e2230;
+      border: 1px solid #334155;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      margin: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="brand">
+      <div class="brand-icon" id="brand-logo">👁️</div>
+      <div>
+        <div class="brand-title">Remotion Video Studio</div>
+        <div style="font-size: 11px; color: #64748b; font-family: monospace;">CREEPY RULES + 2D STORY ENGINE // EXACT 1:1</div>
+      </div>
+    </div>
+
+    <!-- MODE SWITCHER TABS -->
+    <div class="mode-switcher">
+      <button class="mode-btn active creepy" id="mode-btn-creepy">
+        <span>👁️ Creepy Rules (Analog Horror)</span>
+      </button>
+      <button class="mode-btn" id="mode-btn-story">
+        <span>🎭 2D Story Studio (Hoạt Hình)</span>
+      </button>
+    </div>
+
+    <div class="header-actions">
+      <button class="btn btn-purple" id="btn-open-auto-director" title="Đạo diễn kịch bản chữ thành các phân cảnh tự động">
+        <span>⚡ Đạo Diễn Tự Động</span>
+      </button>
+      <button class="btn" id="btn-open-templates" title="Chọn các kịch bản mẫu từ 2 bộ nguồn">
+        <span>📁 Kịch Bản Mẫu</span>
+      </button>
+      <button class="btn" id="btn-generate-tts" title="Tạo giọng đọc AI với macOS say">
+        <span>🎙️ Lồng Tiếng (TTS)</span>
+      </button>
+      <button class="btn btn-success" id="btn-save-scenario" title="Lưu kịch bản vào bộ nhớ">
+        <span>💾 Lưu</span>
+      </button>
+      <button class="btn btn-primary" id="btn-render-video" title="Xuất video MP4 bằng Remotion render">
+        <span>🚀 Xuất Video MP4</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN WORKSPACE -->
+  <div class="main-container">
+
+    <!-- LEFT PANEL: SCRIPT & SCENE EDITOR -->
+    <div class="panel-editor">
+
+      <!-- SUB-TABS: STORYBOARD / RAW TEXT / RAW JSON -->
+      <div class="subtabs-bar">
+        <button class="subtab-btn active creepy" id="tab-btn-storyboard">🎬 Phân Cảnh (Storyboard)</button>
+        <button class="subtab-btn" id="tab-btn-script">📝 Kịch Bản Chữ (Text Script)</button>
+        <button class="subtab-btn" id="tab-btn-json">⚙️ Mã JSON (Raw Data)</button>
+      </div>
+
+      <!-- VIEW 1: STORYBOARD (DEFAULT) -->
+      <div id="view-storyboard">
+        <!-- PROJECT SETTINGS -->
+        <div class="card">
+          <div class="card-title">
+            <span>⚙️ Thông Số Kịch Bản (<span id="active-mode-label" style="color: #ef4444;">CREEPY RULES</span>)</span>
+            <span style="font-size: 11px; color: #38bdf8;" id="total-duration-badge">0s (0 frames)</span>
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Tên kịch bản (Title)</label>
+              <input type="text" id="meta-title" value="If Your Dog Ever Stands On Two Legs ACT NORMAL">
+            </div>
+            
+            <!-- Creepy Rules specific fields -->
+            <div class="form-group creepy-field" id="group-channel">
+              <label>Tên Kênh (Channel)</label>
+              <input type="text" id="meta-channel" value="BRADIKININ">
+            </div>
+            <div class="form-group creepy-field" id="group-filecode">
+              <label>Mã hồ sơ HUD (File No)</label>
+              <input type="number" id="meta-filecode" value="41">
+            </div>
+            <div class="form-group creepy-field" id="group-rules">
+              <label>Số quy tắc (Total Rules)</label>
+              <input type="number" id="meta-rules" value="7" min="1" max="20">
+            </div>
+            <div class="form-group creepy-field" id="group-accent">
+              <label>Màu cảnh báo (Accent Color)</label>
+              <select id="meta-accent">
+                <option value="#e51939">Đỏ Cảnh Báo (#e51939 - Blood Red)</option>
+                <option value="#facc15">Vàng Nguy Hiểm (#facc15 - Hazard Yellow)</option>
+                <option value="#38bdf8">Xanh Cyan (#38bdf8 - Tactical Cyan)</option>
+                <option value="#ffffff">Trắng Thuần (#ffffff - Pure White)</option>
+              </select>
+            </div>
+
+            <!-- Story Studio specific fields -->
+            <div class="form-group story-field" id="group-lang" style="display: none;">
+              <label>Ngôn ngữ (Lang)</label>
+              <select id="meta-lang">
+                <option value="vi">Tiếng Việt (vi)</option>
+                <option value="en">English (en)</option>
+              </select>
+            </div>
+            <div class="form-group story-field" id="group-music" style="display: none;">
+              <label>Nhạc nền (BGM File)</label>
+              <input type="text" id="meta-music" value="sfx/drone.wav" placeholder="sfx/drone.wav hoặc audio/music.mp3">
+            </div>
+
+            <!-- Common fields -->
+            <div class="form-group">
+              <label>Tỉ lệ khung hình (Aspect)</label>
+              <select id="meta-aspect">
+                <option value="16:9">16:9 (Ngang - YouTube Full HD 1920x1080)</option>
+                <option value="9:16">9:16 (Dọc - TikTok / Reels / Shorts 1080x1920)</option>
+                <option value="1:1">1:1 (Vuông - Square 1080x1080)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Tốc độ khung hình (FPS)</label>
+              <select id="meta-fps">
+                <option value="30">30 FPS (Tiêu chuẩn mượt mà)</option>
+                <option value="24">24 FPS (Cinematic cổ điển)</option>
+                <option value="60">60 FPS (Siêu mượt)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- SCENES LIST -->
+        <div class="card">
+          <div class="card-title">
+            <span>🎬 Danh Sách Phân Cảnh (Storyboard Scenes)</span>
+            <button class="btn" style="padding: 4px 10px; font-size: 11px;" id="btn-add-scene">+ Thêm Cảnh</button>
+          </div>
+
+          <div class="scene-list" id="scenes-container">
+            <!-- Dynamic scene cards will be rendered here -->
+          </div>
+
+          <div style="margin-top: 14px; text-align: center;">
+            <button class="btn btn-primary" style="width: 100%; justify-content: center;" id="btn-add-scene-bottom">
+              + Thêm Phân Cảnh Mới (Add Scene)
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIEW 2: RAW TEXT SCRIPT -->
+      <div id="view-script" style="display: none;">
+        <div class="card">
+          <div class="card-title">
+            <span>📝 Soạn Thảo Kịch Bản Chữ (Natural Text / Script)</span>
+            <button class="btn btn-purple" id="btn-compile-script" style="padding: 4px 12px; font-size: 11px;">
+              ⚡ Chuyển Sang Phân Cảnh (Auto-Direct)
+            </button>
+          </div>
+          <p style="font-size: 12px; color: #94a3b8; margin-bottom: 10px;">
+            Nhập từng câu kịch bản. Bạn có thể gắn thẻ như <code>@scream</code>, <code>@run</code>, <code>@stare</code>, <code>@rule 1</code> hoặc để hệ thống tự động nhận diện từ khóa và bối cảnh!
+          </p>
+          <textarea id="raw-script-input" class="raw-script-box" spellcheck="false"></textarea>
+        </div>
+      </div>
+
+      <!-- VIEW 3: RAW JSON CODE -->
+      <div id="view-json" style="display: none;">
+        <div class="card">
+          <div class="card-title">
+            <span>⚙️ Chỉnh Sửa JSON Trực Tiếp (Raw Schema Editor)</span>
+            <button class="btn btn-success" id="btn-apply-json" style="padding: 4px 12px; font-size: 11px;">
+              ✓ Áp Dụng JSON
+            </button>
+          </div>
+          <p style="font-size: 12px; color: #94a3b8; margin-bottom: 10px;">
+            Chỉnh sửa toàn bộ cấu trúc JSON gốc của Remotion. Nhấn "Áp Dụng JSON" để đồng bộ ngay lập tức sang storyboard và preview.
+          </p>
+          <textarea id="raw-json-input" class="raw-json-box" spellcheck="false"></textarea>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT PANEL: PREVIEW & RENDER DASHBOARD -->
+    <div class="panel-preview">
+      
+      <!-- VIDEO PREVIEW CANVAS -->
+      <div class="viewport-card">
+        <div class="viewport-wrapper" id="viewport-wrapper">
+          <canvas id="preview-canvas" width="1920" height="1080"></canvas>
+          <img id="still-preview-img" class="still-img-overlay" alt="Remotion Still Preview">
+          <div id="still-badge" class="still-active-tag">✓ REMOTION STILL PIXEL-PERFECT</div>
+        </div>
+
+        <!-- TRANSPORT CONTROLS -->
+        <div class="transport-bar">
+          <button class="btn" id="btn-play-pause" style="width: 80px; justify-content: center;">
+            <span id="play-icon">▶ Play</span>
+          </button>
+
+          <button class="btn" id="btn-step-back" title="Lùi 1 Frame">◀</button>
+          <button class="btn" id="btn-step-fwd" title="Tiến 1 Frame">▶</button>
+
+          <div class="scrubber-container">
+            <input type="range" id="timeline-scrubber" min="0" max="100" value="0">
+            <div class="timecode" id="timecode-display">00:00:00 / 00:00:00</div>
+          </div>
+
+          <button class="btn" id="btn-capture-still" title="Render khung hình thật từ Remotion Engine">
+            📸 Chụp Frame Thật
+          </button>
+          <button class="btn" id="btn-fullscreen" title="Toàn màn hình">⛶</button>
+        </div>
+      </div>
+
+      <!-- RENDER DASHBOARD -->
+      <div class="render-banner" id="render-dashboard">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div style="font-weight: 800; font-size: 13px; letter-spacing: 1px;">
+            <span id="render-status-icon">⚪</span> TRẠNG THÁI RENDER: <span id="render-status-text">SẴN SÀNG</span>
+          </div>
+          <div id="render-percent-text" style="font-family: monospace; font-weight: 800; font-size: 15px; color: #22c55e;">
+            0%
+          </div>
+        </div>
+
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="render-progress-fill"></div>
+        </div>
+
+        <div class="render-stats">
+          <span id="render-stat-frame">Khung hình: 0 / 0</span>
+          <span id="render-stat-eta">ETA: --</span>
+          <span id="render-stat-speed">Tốc độ: -- fps</span>
+        </div>
+
+        <div class="render-completed-actions" id="render-success-box" style="display: none;">
+          <button class="btn btn-success" id="btn-open-rendered-video" style="flex: 1; justify-content: center;">
+            ▶️ Mở Video Ngay (Open MP4)
+          </button>
+          <button class="btn" id="btn-reveal-folder" style="flex: 1; justify-content: center;">
+            📁 Mở Thư Mục Chứa (Finder)
+          </button>
+        </div>
+      </div>
+
+      <!-- FEATURES SPEC INFO -->
+      <div class="card" style="margin-bottom: 0;">
+        <div class="card-title">✨ 2 Bộ Máy Remotion Độc Quyền Tích Hợp Sẵn</div>
+        <div style="font-size: 12px; color: #94a3b8; line-height: 1.6;">
+          <p><b>1. Creepy Rules Studio:</b> Chuyên dựng video quy tắc sinh tồn, hồ sơ bí ẩn (FILE 041 // Dog Rules, B.O.T. Vacuum). Đồ họa vector phát sáng trắng, bảng màu hazard đỏ/vàng, HUD tiến độ quy tắc, ảnh Polaroid tư liệu, nhiễu glitch RGB split và 11 hiệu ứng âm thanh SFX gốc.</p>
+          <p style="margin-top: 8px;"><b>2. 2D Story Studio:</b> Chuyên dựng video hoạt hình 2D kể chuyện ball-head. 6 nhân vật hoạt hình với các tư thế (ngồi, nói, cầm ly, hoảng sợ, gục ngã...) & biểu cảm, bối cảnh hoàng hôn/đêm, thẻ chỉ hướng `TITLE →`, huy hiệu giờ `11 P.M.`, tem đếm số đỏ và tự động hạ âm nhạc (ducking) khi có giọng kể.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- AUTO DIRECTOR MODAL -->
+  <div class="modal-overlay" id="auto-director-modal" style="display: none;">
+    <div class="modal-content" style="width: 640px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <h3 style="font-size: 16px; font-weight: 800; letter-spacing: 1px; color: #c084fc;">⚡ ĐẠO DIỄN KỊCH BẢN TỰ ĐỘNG (AUTO DIRECTOR)</h3>
+        <button class="btn-icon" id="btn-close-auto-modal" style="font-size: 18px;">✕</button>
+      </div>
+      <p style="font-size: 12px; color: #94a3b8; margin-bottom: 12px; line-height: 1.5;">
+        Dán đoạn văn kể chuyện hoặc danh sách quy tắc vào đây. Bộ máy phân tích sẽ tự động bẻ thành các cảnh (shots), tự phân bổ mẫu biểu cảm, góc máy, bối cảnh và tính thời lượng chuẩn xác theo số từ!
+      </p>
+      <div class="form-group" style="margin-bottom: 14px;">
+        <textarea id="auto-script-input" rows="8" placeholder="Ví dụ:
+IF YOUR DOG EVER STANDS UP ON TWO LEGS, ACT NORMAL. @rule 1 | ACT NORMAL
+DO NOT SCREAM. @scream
+DO NOT RUN. @run
+DO NOT STARE. @stare
+LOCK ALL DOORS AND WINDOWS.
+THAT IS A LONG TIME. @exhibit B | YEAR: 1910 | STATUS: WATCHING"></textarea>
+      </div>
+      <div style="display: flex; justify-content: flex-end; gap: 10px;">
+        <button class="btn" id="btn-cancel-auto">Hủy</button>
+        <button class="btn btn-purple" id="btn-run-auto-director">
+          ⚡ Phân Tích & Tự Động Tạo Cảnh
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEMPLATE MODAL -->
+  <div class="modal-overlay" id="template-modal" style="display: none;">
+    <div class="modal-content">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <h3 style="font-size: 16px; font-weight: 800; letter-spacing: 1px;">📁 CHỌN KỊCH BẢN MẪU CHUẨN (PRESETS)</h3>
+        <button class="btn-icon" id="btn-close-modal" style="font-size: 18px;">✕</button>
+      </div>
+      <div id="template-list-container"></div>
+    </div>
+  </div>
+
+  <!-- TTS MODAL -->
+  <div class="modal-overlay" id="tts-modal" style="display: none;">
+    <div class="modal-content">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <h3 style="font-size: 16px; font-weight: 800; letter-spacing: 1px;">🎙️ TẠO GIỌNG ĐỌC AI (MACOS TTS)</h3>
+        <button class="btn-icon" id="btn-close-tts-modal" style="font-size: 18px;">✕</button>
+      </div>
+      <div class="form-group" style="margin-bottom: 12px;">
+        <label>Chọn giọng đọc</label>
+        <select id="tts-voice-select">
+          <option value="Daniel">Daniel (Anh - Giọng kinh dị đặc trưng)</option>
+          <option value="Fred">Fred (Robot cổ điển)</option>
+          <option value="Samantha">Samantha (Mỹ - Trầm tĩnh)</option>
+          <option value="Alex">Alex (Mỹ - Tiêu chuẩn)</option>
+          <option value="Whisper">Whisper (Thì thầm rùng rợn)</option>
+          <option value="Linh">Linh (Tiếng Việt nếu máy có hỗ trợ)</option>
+        </select>
+      </div>
+      <div class="form-group" style="margin-bottom: 16px;">
+        <label>Nội dung lồng tiếng</label>
+        <textarea id="tts-script-text" rows="5" placeholder="Nhập văn bản cần tạo giọng đọc..."></textarea>
+      </div>
+      <div style="display: flex; gap: 10px;">
+        <button class="btn" id="btn-pull-subtitles" style="flex: 1; justify-content: center;">
+          Lấy từ Phụ đề các cảnh
+        </button>
+        <button class="btn btn-primary" id="btn-do-generate-tts" style="flex: 1.5; justify-content: center;">
+          ⚡ Tạo File Âm Thanh (.AIFF)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

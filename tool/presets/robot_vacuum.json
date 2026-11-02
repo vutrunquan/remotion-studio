@@ -1,0 +1,74 @@
+{
+  "id": "robot_vacuum",
+  "mode": "creepy_rules",
+  "name": "🤖 Creepy Rules // Case 002 (Robot Vacuum at Bedroom Door)",
+  "title": "If Your Robot Vacuum Stops At Your Bedroom Door",
+  "fileCode": "B.O.T. — CASE 002",
+  "totalRules": 7,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "audioSrc": "voiceover.mp3",
+  "scenes": [
+    {
+      "id": "rv1",
+      "type": "vector_scene",
+      "vectorPreset": "robot_hallway",
+      "duration": 4.5,
+      "ruleNumber": null,
+      "subtitle": "IF YOUR ROBOT VACUUM EVER STOPS AT YOUR BEDROOM DOOR,\nDO NOT OPEN THE DOOR.",
+      "hudTime": "00:58"
+    },
+    {
+      "id": "rv2",
+      "type": "warning_card",
+      "duration": 2.0,
+      "ruleNumber": null,
+      "warningText": "DO NOT CHECK THE APP.",
+      "subtitle": "DO NOT CHECK THE APP.",
+      "hudTime": "00:58"
+    },
+    {
+      "id": "rv3",
+      "type": "rule_card",
+      "duration": 3.0,
+      "ruleNumber": 1,
+      "ruleTitle": "RULE 1: DO NOT LOOK AT THE MAP",
+      "subtitle": "THERE ARE SEVEN RULES.\nYOU WILL BREAK THE FIFTH ONE AT THREE TWELVE.",
+      "hudTime": "00:59"
+    },
+    {
+      "id": "rv4",
+      "type": "vector_scene",
+      "vectorPreset": "robot_hallway",
+      "duration": 4.0,
+      "ruleNumber": 1,
+      "subtitle": "A GREEN LIGHT BLINKS ONCE A SECOND.\nGREEN MEANS IT IS FINE.",
+      "hudTime": "01:00"
+    },
+    {
+      "id": "rv5",
+      "type": "exhibit",
+      "duration": 3.5,
+      "ruleNumber": 1,
+      "exhibit": {
+        "code": "MAP LOG #09",
+        "title": "NEW ROOM DETECTED: 45 SQ FT",
+        "note": "LOCATION: BEHIND CLOSET WALL",
+        "image": "exhibit-b.jpg"
+      },
+      "subtitle": "TONIGHT, THE APP SHOWS ONE MORE ROOM.",
+      "hudTime": "01:01"
+    },
+    {
+      "id": "rv6",
+      "type": "glitch",
+      "duration": 3.5,
+      "ruleNumber": 5,
+      "glitchText": "YOU DO NOT HAVE A CAT.",
+      "subtitle": "YOU TELL YOURSELF IT IS A GLITCH.\nYOU DO NOT HAVE A CAT.",
+      "hudTime": "01:02"
+    }
+  ]
+}
+
